@@ -80,7 +80,7 @@
 server:
   port: 8080
   servlet:
-    context-path: /demo
+    context-path: /demo1
 spring:
   swagger:
     enabled: true
@@ -88,9 +88,9 @@ spring:
     description: 这是一个简单的 Swagger API 演示
     version: 1.0.0-SNAPSHOT
     contact:
-      name: Yangkai.Shen
-      email: 237497819@qq.com
-      url: http://xkcoding.com
+      name: Leo
+      email: 1563261394@qq.com
+    # url: http://xkcoding.com
     # swagger扫描的基础包，默认：全扫描
     # base-package:
     # 需要处理的基础URL规则，默认：/**
@@ -100,8 +100,8 @@ spring:
     security:
       # 是否启用 swagger 登录验证
       filter-plugin: true
-      username: xkcoding
-      password: 123456
+      username: root
+      password: root
     global-response-messages:
       GET[0]:
         code: 400
