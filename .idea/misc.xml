@@ -3,12 +3,14 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/spring-boot-demo-helloworld2" />
+    <file type="web" url="file://$PROJECT_DIR$/spring-boot-demo-war" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-demo-helloworld/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-demo-war/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
