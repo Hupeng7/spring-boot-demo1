@@ -9,6 +9,7 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>spring-boot-demo-swagger-beauty</module>
+    <module>spring-boot-demo-helloworld</module>
   </modules>
 
   <packaging>pom</packaging>
