@@ -11,6 +11,7 @@
         <module>spring-boot-demo-swagger-beauty</module>
         <module>spring-boot-demo-helloworld</module>
         <module>spring-boot-demo-war</module>
+        <module>spring-boot-demo-swagger</module>
     </modules>
 
     <packaging>pom</packaging>

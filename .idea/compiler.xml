@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring-boot-demo-helloworld" />
+        <module name="spring-boot-demo-swagger" />
         <module name="spring-boot-demo-swagger-beauty" />
         <module name="spring-boot-demo-war" />
       </profile>

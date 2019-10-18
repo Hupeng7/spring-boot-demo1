@@ -2,3 +2,9 @@ server:
   port: 8080
   servlet:
     context-path: /prod/demo
+
+spring:
+  application:
+    name: hello-world
+  profiles:
+    active: prod
