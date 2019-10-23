@@ -12,6 +12,7 @@
         <module>spring-boot-demo-helloworld</module>
         <module>spring-boot-demo-war</module>
         <module>spring-boot-demo-swagger</module>
+        <module>spring-boot-demo-dynamic-datasource</module>
     </modules>
 
     <packaging>pom</packaging>
