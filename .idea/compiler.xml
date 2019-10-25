@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="spring-boot-demo-dynamic-datasource" />
         <module name="spring-boot-demo-helloworld" />
+        <module name="spring-boot-demo-multi-datasource-jpa" />
         <module name="spring-boot-demo-swagger" />
         <module name="spring-boot-demo-swagger-beauty" />
         <module name="spring-boot-demo-war" />

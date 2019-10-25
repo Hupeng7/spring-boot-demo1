@@ -13,6 +13,7 @@
         <option value="$PROJECT_DIR$/spring-boot-demo-war/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-demo-swagger/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-demo-dynamic-datasource/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-demo-multi-datasource-jpa/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

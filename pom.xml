@@ -13,6 +13,7 @@
         <module>spring-boot-demo-war</module>
         <module>spring-boot-demo-swagger</module>
         <module>spring-boot-demo-dynamic-datasource</module>
+        <module>spring-boot-demo-multi-datasource-jpa</module>
     </modules>
 
     <packaging>pom</packaging>
