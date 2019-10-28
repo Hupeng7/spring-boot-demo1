@@ -62,9 +62,9 @@ public class SpringBootDemoMultiDatasourceJpaApplicationTests {
 
     @Test
     public void testDelete(){
-        primaryMultiTableRepository.deleteById(1187578244036169728L);
-
-        secondMultiTableRepository.deleteById(1187578081032933376L);
+//        primaryMultiTableRepository.deleteById(1187578244036169728L);
+//
+//        secondMultiTableRepository.deleteById(1187578081032933376L);
     }
 
 }
