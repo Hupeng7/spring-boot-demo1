@@ -1,0 +1,10 @@
+
+application:
+  name: dev环境 @artifactId@
+  version: dev环境 @version@
+
+developer:
+  name: dev环境 Leo
+  website: dev环境 http://leo.com
+  qq: dev环境 1563261394
+  phone-number: dev环境 13587654321
