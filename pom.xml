@@ -17,6 +17,7 @@
         <module>spring-boot-demo-multi-datasource-mybatis</module>
         <module>spring-boot-demo-properties</module>
         <module>spring-boot-demo-ratelimit-guava</module>
+        <module>spring-boot-demo-actuator</module>
     </modules>
 
     <packaging>pom</packaging>

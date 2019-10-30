@@ -17,6 +17,7 @@
         <option value="$PROJECT_DIR$/spring-boot-demo-multi-datasource-mybatis/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-demo-properties/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-demo-ratelimit-guava/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-demo-actuator/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
