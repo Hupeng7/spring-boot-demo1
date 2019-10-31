@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <directory url="file://$PROJECT_DIR$/spring-boot-demo-admin/spring-boot-demo-admin-c/src/main/resources/archetype-resources" includeSubdirectories="true" />
+    </excludeFromCompile>
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring-boot-demo-actuator" />
+        <module name="spring-boot-demo-admin-client" />
+        <module name="spring-boot-demo-admin-server" />
         <module name="spring-boot-demo-dynamic-datasource" />
         <module name="spring-boot-demo-helloworld" />
         <module name="spring-boot-demo-multi-datasource-jpa" />
@@ -19,9 +24,13 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="spring-boot-demo-admin-b" target="1.8" />
+      <module name="spring-boot-demo-admin-c" target="1.7" />
+      <module name="spring-boot-demo-admin-d" target="1.7" />
       <module name="spring-boot-demo-hello" target="1.8" />
       <module name="spring-boot-demo-helloword1" target="1.7" />
       <module name="spring-boot-demo-helloworld2" target="1.7" />
+      <module name="springbootdemoadmina" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

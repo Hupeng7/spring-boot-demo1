@@ -22,6 +22,10 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/spring-boot-demo-admin/spring-boot-demo-admin-a/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-demo-admin/spring-boot-demo-admin-b/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-demo-admin/spring-boot-demo-admin-c/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-demo-admin/spring-boot-demo-admin-d/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-demo-helloword1/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-demo-helloworld2/pom.xml" />
       </set>

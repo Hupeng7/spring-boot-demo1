@@ -4,6 +4,13 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-demo-actuator" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-demo-actuator/src/main/resources/application.yml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-demo-admin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-demo-admin/spring-boot-demo-admin-a" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-demo-admin/spring-boot-demo-admin-b" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-demo-admin/spring-boot-demo-admin-c" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-demo-admin/spring-boot-demo-admin-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-demo-admin/spring-boot-demo-admin-d" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-demo-admin/spring-boot-demo-admin-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-demo-dynamic-datasource" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-demo-helloworld" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-demo-multi-datasource-jpa" charset="UTF-8" />
