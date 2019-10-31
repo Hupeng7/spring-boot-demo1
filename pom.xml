@@ -19,6 +19,7 @@
         <module>spring-boot-demo-ratelimit-guava</module>
         <module>spring-boot-demo-actuator</module>
         <module>spring-boot-demo-admin</module>
+        <module>spring-boot-demo-async</module>
     </modules>
 
     <packaging>pom</packaging>
