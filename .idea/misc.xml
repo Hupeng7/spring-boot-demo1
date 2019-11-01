@@ -19,6 +19,7 @@
         <option value="$PROJECT_DIR$/spring-boot-demo-ratelimit-guava/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-demo-actuator/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-demo-async/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-demo-task/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

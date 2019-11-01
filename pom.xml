@@ -20,6 +20,7 @@
         <module>spring-boot-demo-actuator</module>
         <module>spring-boot-demo-admin</module>
         <module>spring-boot-demo-async</module>
+        <module>spring-boot-demo-task</module>
     </modules>
 
     <packaging>pom</packaging>
