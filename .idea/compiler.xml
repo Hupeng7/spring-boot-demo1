@@ -22,6 +22,7 @@
         <module name="spring-boot-demo-swagger" />
         <module name="spring-boot-demo-swagger-beauty" />
         <module name="spring-boot-demo-task" />
+        <module name="spring-boot-demo-task-quartz" />
         <module name="spring-boot-demo-war" />
       </profile>
     </annotationProcessing>
