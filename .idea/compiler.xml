@@ -24,6 +24,7 @@
         <module name="spring-boot-demo-task" />
         <module name="spring-boot-demo-task-quartz" />
         <module name="spring-boot-demo-war" />
+        <module name="spring-boot-demo-websocket" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

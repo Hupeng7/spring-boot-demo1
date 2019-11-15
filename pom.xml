@@ -22,6 +22,7 @@
         <module>spring-boot-demo-async</module>
         <module>spring-boot-demo-task</module>
         <module>spring-boot-demo-task-quartz</module>
+        <module>spring-boot-demo-websocket</module>
     </modules>
 
     <packaging>pom</packaging>
