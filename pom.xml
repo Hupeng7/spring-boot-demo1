@@ -23,6 +23,7 @@
         <module>spring-boot-demo-task</module>
         <module>spring-boot-demo-task-quartz</module>
         <module>spring-boot-demo-websocket</module>
+        <module>spring-boot-demo-email</module>
     </modules>
 
     <packaging>pom</packaging>

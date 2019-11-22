@@ -14,6 +14,7 @@
         <module name="spring-boot-demo-admin-server" />
         <module name="spring-boot-demo-async" />
         <module name="spring-boot-demo-dynamic-datasource" />
+        <module name="spring-boot-demo-email" />
         <module name="spring-boot-demo-helloworld" />
         <module name="spring-boot-demo-multi-datasource-jpa" />
         <module name="spring-boot-demo-multi-datasource-mybatis" />

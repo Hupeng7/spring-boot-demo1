@@ -1,0 +1,21 @@
+spring:
+  # 此处配置需在设置-账户里烤漆POP3/SMTP服务 password为授权码
+  mail:
+    host: smtp.qq.com
+    port: 465
+    username: 1321781093@qq.com
+    # 使用 jasypt 加密密码，使用com.xkcoding.email.PasswordTest.testGeneratePassword 生成加密密码，替换 ENC(加密密码)
+    password: ENC(dK+bWfH7kCnfmmg7gaYbHD6HyjxyeN+a+cgEdzaVrfQ=)
+    protocol: smtp
+    test-connection: true
+    default-encoding: UTF-8
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.starttls.required: true
+      mail.smtp.ssl.enable: true
+      mail.display.sendmail: spring-boot-demo
+# 为 jasypt 配置解密秘钥
+jasypt:
+  encryptor:
+    password: spring-boot-demo
