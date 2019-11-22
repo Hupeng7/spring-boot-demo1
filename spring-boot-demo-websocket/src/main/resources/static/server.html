@@ -159,7 +159,7 @@
             },
             _destroySockJs() {
                 if (this.stompClient != null) {
-                    this.stompClient.disconnect();
+                    this.stompClient.disconnect();/topic/server
                     this.socket.onclose;
                     this.socket.close();
                     this.stompClient = {};
