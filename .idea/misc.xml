@@ -23,6 +23,7 @@
         <option value="$PROJECT_DIR$/spring-boot-demo-task-quartz/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-demo-websocket/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-demo-email/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-demo-exception-handler/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
