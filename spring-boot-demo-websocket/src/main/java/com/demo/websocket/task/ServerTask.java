@@ -28,7 +28,7 @@ public class ServerTask {
     @Autowired
     private SimpMessagingTemplate simpMessagingTemplate;
 
-    @Scheduled(cron = "0/2 * * * * ?")
+    @Scheduled(cron = "* * * * * ?")
     public void websocket() throws Exception {
         log.info("【推送消息】开始执行：{}", DateUtil.formatDateTime(new Date()));
         Server server = new Server();
@@ -38,5 +38,13 @@ public class ServerTask {
         simpMessagingTemplate.convertAndSend(WebSocketConsts.PUSH_SERVER, JSONUtil.toJsonStr(dict));
         log.info("【推送消息】执行结束：{}", DateUtil.formatDateTime(new Date()));
     }
+
+//    @Scheduled(cron = "0/1 * * * * ?")
+//    public void websocketPerSec() throws Exception {
+//        log.info("【推送时间消息】开始执行：{}", DateUtil.formatDateTime(new Date()));
+//        String now = DateUtil.formatDateTime(new Date());
+//        simpMessagingTemplate.convertAndSend(WebSocketConsts.PUSH_SERVER, JSONUtil.toJsonStr(now));
+//        log.info("【推送时间消息】执行结束：{}", DateUtil.formatDateTime(new Date()));
+//    }
 
 }

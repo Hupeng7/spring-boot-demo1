@@ -1,8 +1,14 @@
 package com.demo.websocket.util;
 
+import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.lang.Dict;
 import com.demo.websocket.model.Server;
+import com.demo.websocket.payload.KV;
 import com.demo.websocket.payload.ServerVO;
+import org.assertj.core.util.Lists;
+
+import java.util.Date;
+import java.util.List;
 
 /**
  * @ClassName ServerUtil
@@ -32,12 +38,15 @@ public class ServerUtil {
      * @return
      */
     public static Dict wrapServerDict(ServerVO serverVO) {
+        List<KV> time = Lists.newArrayList();
+        time.add(new KV("时间", DateUtil.formatDateTime(new Date())));
         Dict dict = Dict.create()
                 .set("cpu", serverVO.getCpu().get(0).getData())
                 .set("mem", serverVO.getMem().get(0).getData())
                 .set("sys", serverVO.getSys().get(0).getData())
                 .set("jvm", serverVO.getJvm().get(0).getData())
-                .set("sysFile", serverVO.getSysFile().get(0).getData());
+                .set("sysFile", serverVO.getSysFile().get(0).getData())
+                .set("now", time);
         return dict;
     }
 
