@@ -25,6 +25,9 @@
         <option value="$PROJECT_DIR$/spring-boot-demo-email/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-demo-exception-handler/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-demo-websocket-socketio/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-demo-orm-beetlsql/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-demo-orm-jdbctemplate/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-demo-orm-jpa/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

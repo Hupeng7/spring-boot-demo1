@@ -26,6 +26,9 @@
         <module>spring-boot-demo-email</module>
         <module>spring-boot-demo-exception-handler</module>
         <module>spring-boot-demo-websocket-socketio</module>
+        <module>spring-boot-demo-orm-beetlsql</module>
+        <module>spring-boot-demo-orm-jdbctemplate</module>
+        <module>spring-boot-demo-orm-jpa</module>
     </modules>
 
     <packaging>pom</packaging>
