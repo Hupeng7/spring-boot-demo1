@@ -90,8 +90,6 @@ public class UserServiceTest extends SpringBootDemoOrmBeetlsqlApplicationTests {
         Assert.assertEquals(5, userByPage.getList().size());
         Assert.assertEquals(userList.size(), userByPage.getTotalRow());
         log.debug("【userByPage】= {}", JSONUtil.toJsonStr(userByPage));
-
-
     }
 
 
