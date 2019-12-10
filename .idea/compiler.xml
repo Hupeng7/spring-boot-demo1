@@ -22,6 +22,9 @@
         <module name="spring-boot-demo-orm-beetlsql" />
         <module name="spring-boot-demo-orm-jdbctemplate" />
         <module name="spring-boot-demo-orm-jpa" />
+        <module name="spring-boot-demo-orm-mybatis" />
+        <module name="spring-boot-demo-orm-mybatis-mapper-page" />
+        <module name="spring-boot-demo-orm-mybatis-plus" />
         <module name="spring-boot-demo-properties" />
         <module name="spring-boot-demo-ratelimit-guava" />
         <module name="spring-boot-demo-swagger" />
