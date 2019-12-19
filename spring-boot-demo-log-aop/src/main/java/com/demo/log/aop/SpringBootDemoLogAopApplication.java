@@ -1,4 +1,4 @@
-package com.demo.orm.mybatis.plus;
+package com.demo.log.aop;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,10 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author Leo
  */
 @SpringBootApplication
-public class SpringBootDemoOrmMybatisPlusApplication {
+public class SpringBootDemoLogAopApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringBootDemoOrmMybatisPlusApplication.class, args);
+        SpringApplication.run(SpringBootDemoLogAopApplication.class, args);
     }
 
 }

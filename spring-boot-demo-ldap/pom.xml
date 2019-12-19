@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!--未实现-->
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.demo</groupId>
@@ -9,9 +10,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.demo</groupId>
-    <artifactId>spring-boot-demo-exception-handler</artifactId>
+    <artifactId>spring-boot-demo-ldap</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-boot-demo-exception-handler</name>
+    <name>spring-boot-demo-ldap</name>
     <description>Demo project for Spring Boot</description>
     <packaging>jar</packaging>
 
@@ -24,12 +25,7 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter-data-ldap</artifactId>
         </dependency>
 
         <dependency>
@@ -64,11 +60,9 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
     </dependencies>
 
     <build>
-        <finalName>spring-boot-demo-exception-handler</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

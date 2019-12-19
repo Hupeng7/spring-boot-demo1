@@ -1,4 +1,4 @@
-package com.demo.orm.mybatis.plus;
+package com.demo.logback;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class SpringBootDemoOrmMybatisPlusApplicationTests {
+public class SpringBootDemoLogbackApplicationTests {
 
     @Test
     public void contextLoads() {

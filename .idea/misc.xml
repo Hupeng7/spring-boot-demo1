@@ -31,6 +31,9 @@
         <option value="$PROJECT_DIR$/spring-boot-demo-orm-mybatis/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-demo-orm-mybatis-mapper-page/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-demo-orm-mybatis-plus/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-demo-ldap/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-demo-log-aop/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-demo-logback/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

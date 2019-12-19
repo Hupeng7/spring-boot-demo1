@@ -29,6 +29,11 @@
         <module>spring-boot-demo-orm-beetlsql</module>
         <module>spring-boot-demo-orm-jdbctemplate</module>
         <module>spring-boot-demo-orm-jpa</module>
+        <module>spring-boot-demo-orm-mybatis</module>
+        <module>spring-boot-demo-orm-mybatis-mapper-page</module>
+        <module>spring-boot-demo-orm-mybatis-plus</module>
+        <module>spring-boot-demo-ldap</module>
+        <module>spring-boot-demo-logback</module>
     </modules>
 
     <packaging>pom</packaging>

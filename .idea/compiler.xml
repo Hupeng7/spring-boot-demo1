@@ -17,6 +17,9 @@
         <module name="spring-boot-demo-email" />
         <module name="spring-boot-demo-exception-handler" />
         <module name="spring-boot-demo-helloworld" />
+        <module name="spring-boot-demo-ldap" />
+        <module name="spring-boot-demo-log-aop" />
+        <module name="spring-boot-demo-logback" />
         <module name="spring-boot-demo-multi-datasource-jpa" />
         <module name="spring-boot-demo-multi-datasource-mybatis" />
         <module name="spring-boot-demo-orm-beetlsql" />

@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.demo</groupId>
-    <artifactId>spring-boot-demo-exception-handler</artifactId>
+    <artifactId>spring-boot-demo-logback</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-boot-demo-exception-handler</name>
+    <name>spring-boot-demo-logback</name>
     <description>Demo project for Spring Boot</description>
     <packaging>jar</packaging>
 
@@ -22,16 +22,6 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -64,11 +54,10 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
     </dependencies>
 
     <build>
-        <finalName>spring-boot-demo-exception-handler</finalName>
+        <finalName>spring-boot-demo-logback</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
