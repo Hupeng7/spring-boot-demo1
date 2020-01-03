@@ -13,6 +13,9 @@
         <module name="spring-boot-demo-admin-client" />
         <module name="spring-boot-demo-admin-server" />
         <module name="spring-boot-demo-async" />
+        <module name="spring-boot-demo-cache-ehcache" />
+        <module name="spring-boot-demo-cache-redis" />
+        <module name="spring-boot-demo-codegen" />
         <module name="spring-boot-demo-dynamic-datasource" />
         <module name="spring-boot-demo-email" />
         <module name="spring-boot-demo-exception-handler" />
@@ -30,6 +33,8 @@
         <module name="spring-boot-demo-orm-mybatis-plus" />
         <module name="spring-boot-demo-properties" />
         <module name="spring-boot-demo-ratelimit-guava" />
+        <module name="spring-boot-demo-session" />
+        <module name="spring-boot-demo-sharding-jdbc" />
         <module name="spring-boot-demo-swagger" />
         <module name="spring-boot-demo-swagger-beauty" />
         <module name="spring-boot-demo-task" />
