@@ -25,6 +25,7 @@
         <module name="spring-boot-demo-logback" />
         <module name="spring-boot-demo-multi-datasource-jpa" />
         <module name="spring-boot-demo-multi-datasource-mybatis" />
+        <module name="spring-boot-demo-mybatis-generator" />
         <module name="spring-boot-demo-orm-beetlsql" />
         <module name="spring-boot-demo-orm-jdbctemplate" />
         <module name="spring-boot-demo-orm-jpa" />

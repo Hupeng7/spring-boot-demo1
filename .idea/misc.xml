@@ -41,6 +41,7 @@
         <option value="$PROJECT_DIR$/spring-boot-demo-cache-redis/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-demo-ratelimit-redis/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-demo-rbac-security/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-demo-mybatis-generator/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

@@ -39,6 +39,7 @@
         <module>spring-boot-demo-cache-redis</module>
         <module>spring-boot-demo-codegen</module>
         <module>spring-boot-demo-ratelimit-redis</module>
+        <module>spring-boot-demo-mybatis-generator</module>
     </modules>
 
     <packaging>pom</packaging>
