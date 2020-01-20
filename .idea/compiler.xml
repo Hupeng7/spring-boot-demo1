@@ -33,6 +33,8 @@
         <module name="spring-boot-demo-orm-mybatis-plus" />
         <module name="spring-boot-demo-properties" />
         <module name="spring-boot-demo-ratelimit-guava" />
+        <module name="spring-boot-demo-ratelimit-redis" />
+        <module name="spring-boot-demo-rbac-security" />
         <module name="spring-boot-demo-session" />
         <module name="spring-boot-demo-sharding-jdbc" />
         <module name="spring-boot-demo-swagger" />

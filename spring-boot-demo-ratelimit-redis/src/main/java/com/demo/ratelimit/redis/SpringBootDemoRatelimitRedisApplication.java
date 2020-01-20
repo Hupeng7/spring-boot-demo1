@@ -1,4 +1,4 @@
-package com.demo.ldap;
+package com.demo.ratelimit.redis;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,10 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author Leo
  */
 @SpringBootApplication
-public class SpringBootDemoLdapApplication {
+public class SpringBootDemoRatelimitRedisApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringBootDemoLdapApplication.class, args);
+        SpringApplication.run(SpringBootDemoRatelimitRedisApplication.class, args);
     }
 
 }

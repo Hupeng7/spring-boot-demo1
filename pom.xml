@@ -38,6 +38,7 @@
         <module>spring-boot-demo-cache-ehcache</module>
         <module>spring-boot-demo-cache-redis</module>
         <module>spring-boot-demo-codegen</module>
+        <module>spring-boot-demo-ratelimit-redis</module>
     </modules>
 
     <packaging>pom</packaging>

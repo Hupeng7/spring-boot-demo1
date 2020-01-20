@@ -36,6 +36,9 @@
     <file url="file://$PROJECT_DIR$/spring-boot-demo-orm-mybatis/src/main/resources/application.yml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-demo-properties" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-demo-ratelimit-guava" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-demo-ratelimit-redis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-demo-ratelimit-redis/src/main/resources/application.yml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-demo-rbac-security" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-demo-session" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-demo-session/src/main/resources/application.yml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-demo-sharding-jdbc" charset="UTF-8" />

@@ -1,16 +1,13 @@
-package com.demo.ldap;
+package com.demo.rbac.security;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/**
- * @author Leo
- */
 @SpringBootApplication
-public class SpringBootDemoLdapApplication {
+public class SpringBootDemoRbacSecurityApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringBootDemoLdapApplication.class, args);
+        SpringApplication.run(SpringBootDemoRbacSecurityApplication.class, args);
     }
 
 }

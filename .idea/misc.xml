@@ -39,6 +39,8 @@
         <option value="$PROJECT_DIR$/spring-boot-demo-cache-ehcache/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-demo-codegen/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-demo-cache-redis/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-demo-ratelimit-redis/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-demo-rbac-security/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
