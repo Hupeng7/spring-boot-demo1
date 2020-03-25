@@ -1,5 +1,6 @@
 
 #### 添加一个module
- - 
+ - step1
  ![1](/down-files/p1.jpg)  
- <img src="./down-files/p1.jpg" style=zoom:70%"">
+ - step2
+ ![2](/down-files/p2.jpg)
