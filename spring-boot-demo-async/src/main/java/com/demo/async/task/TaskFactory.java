@@ -79,6 +79,7 @@ public class TaskFactory {
      * @throws InterruptedException
      */
     public void task3() throws InterruptedException {
+
         doTask("task3", 3);
     }
 
@@ -87,5 +88,4 @@ public class TaskFactory {
         TimeUnit.SECONDS.sleep(time);
         log.info("{}执行成功，当前线程名称【{}】", taskName, Thread.currentThread().getName());
     }
-
 }

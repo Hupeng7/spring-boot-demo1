@@ -5,21 +5,24 @@
 <generatorConfiguration>
     <!--maven 本地仓库地址-->
     <classPathEntry location="D:/maven_repository/mysql/mysql-connector-java/5.1.38/mysql-connector-java-5.1.38.jar"/>
+    <!-- 指定数据库驱动的jdbc驱动jar包的位置 -->
+    <!--<classPathEntry location="${db.driverLocation}" />-->
     <!-- context 是逆向工程的主要配置信息 -->
     <!-- id：起个名字 -->
     <!-- targetRuntime：设置生成的文件适用于那个 mybatis 版本 -->
     <context id="default" targetRuntime="MyBatis3">
-        <!--optional,指在创建class时，对注释进行控制-->
+        <!--optional,旨在创建class时，对注释进行控制-->
         <commentGenerator>
             <property name="suppressDate" value="true"/>
             <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
             <property name="suppressAllComments" value="true"/>
         </commentGenerator>
-        <!--jdbc的数据库连接 wg_insert 为数据库名字-->
+        <!--jdbc的数据库连接 spring-boot-demo-test 为数据库名字-->
         <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
                         connectionURL="jdbc:mysql://localhost:3306/spring-boot-demo-test?useUnicode=true&amp;characeterEncoding=utf-8&amp;serverTimezone=UTC"
                         userId="root"
-                        password="root"></jdbcConnection>
+                        password="root">
+        </jdbcConnection>
         <!--非必须，类型处理器，在数据库类型和java类型之间的转换控制-->
         <javaTypeResolver>
             <!-- 默认情况下数据库中的 decimal，bigInt 在 Java 对应是 sql 下的 BigDecimal 类 -->
@@ -59,6 +62,11 @@
                selectByExampleQueryId="false"></table>
         <!-- tableName是数据库中的表名，domainObjectName是生成的JAVA模型名，后面的参数不用改，要生成更多的表就在下面继续加table标签 -->
         <table tableName="multi_user" domainObjectName="MultiUser"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false"></table>
+        <!-- tableName是数据库中的表名，domainObjectName是生成的JAVA模型名，后面的参数不用改，要生成更多的表就在下面继续加table标签 -->
+        <table tableName="bind_card_record" domainObjectName="BindCardRecord"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false"></table>

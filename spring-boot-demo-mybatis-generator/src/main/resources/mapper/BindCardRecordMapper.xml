@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.mybatis.generator.dao.BindCardRecordMapper">
+  <resultMap id="BaseResultMap" type="com.demo.mybatis.generator.entity.BindCardRecord">
+    <constructor>
+      <arg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="request_id" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="app_id" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="user_id" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="fund_id" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="account_name" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="card_no" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="id_type" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="id_no" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="mobile" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="customer_id" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="external_ref_number" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="expired_date" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="cvv2" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="status" javaType="java.lang.Byte" jdbcType="TINYINT" />
+      <arg column="valid" javaType="java.lang.Byte" jdbcType="TINYINT" />
+      <arg column="storable_pan" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="token" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="tr1_response_code" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="tr1_response_msg" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="valid_code" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="pay_token" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="tr2_response_code" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="tr2_response_msg" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="submit_date" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="tr2_bind_date" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="create_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="update_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="update_by" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <insert id="insert" parameterType="com.demo.mybatis.generator.entity.BindCardRecord">
+    insert into bind_card_record (id, request_id, app_id, 
+      user_id, fund_id, account_name, 
+      card_no, id_type, id_no, 
+      mobile, customer_id, external_ref_number, 
+      expired_date, cvv2, status, 
+      valid, storable_pan, token, 
+      tr1_response_code, tr1_response_msg, valid_code, 
+      pay_token, tr2_response_code, tr2_response_msg, 
+      submit_date, tr2_bind_date, create_time, 
+      update_time, update_by)
+    values (#{id,jdbcType=INTEGER}, #{requestId,jdbcType=VARCHAR}, #{appId,jdbcType=VARCHAR}, 
+      #{userId,jdbcType=VARCHAR}, #{fundId,jdbcType=VARCHAR}, #{accountName,jdbcType=VARCHAR}, 
+      #{cardNo,jdbcType=VARCHAR}, #{idType,jdbcType=VARCHAR}, #{idNo,jdbcType=VARCHAR}, 
+      #{mobile,jdbcType=VARCHAR}, #{customerId,jdbcType=VARCHAR}, #{externalRefNumber,jdbcType=VARCHAR}, 
+      #{expiredDate,jdbcType=VARCHAR}, #{cvv2,jdbcType=VARCHAR}, #{status,jdbcType=TINYINT}, 
+      #{valid,jdbcType=TINYINT}, #{storablePan,jdbcType=VARCHAR}, #{token,jdbcType=VARCHAR}, 
+      #{tr1ResponseCode,jdbcType=VARCHAR}, #{tr1ResponseMsg,jdbcType=VARCHAR}, #{validCode,jdbcType=VARCHAR}, 
+      #{payToken,jdbcType=VARCHAR}, #{tr2ResponseCode,jdbcType=VARCHAR}, #{tr2ResponseMsg,jdbcType=VARCHAR}, 
+      #{submitDate,jdbcType=TIMESTAMP}, #{tr2BindDate,jdbcType=TIMESTAMP}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP}, #{updateBy,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.demo.mybatis.generator.entity.BindCardRecord">
+    insert into bind_card_record
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="requestId != null">
+        request_id,
+      </if>
+      <if test="appId != null">
+        app_id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="fundId != null">
+        fund_id,
+      </if>
+      <if test="accountName != null">
+        account_name,
+      </if>
+      <if test="cardNo != null">
+        card_no,
+      </if>
+      <if test="idType != null">
+        id_type,
+      </if>
+      <if test="idNo != null">
+        id_no,
+      </if>
+      <if test="mobile != null">
+        mobile,
+      </if>
+      <if test="customerId != null">
+        customer_id,
+      </if>
+      <if test="externalRefNumber != null">
+        external_ref_number,
+      </if>
+      <if test="expiredDate != null">
+        expired_date,
+      </if>
+      <if test="cvv2 != null">
+        cvv2,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="valid != null">
+        valid,
+      </if>
+      <if test="storablePan != null">
+        storable_pan,
+      </if>
+      <if test="token != null">
+        token,
+      </if>
+      <if test="tr1ResponseCode != null">
+        tr1_response_code,
+      </if>
+      <if test="tr1ResponseMsg != null">
+        tr1_response_msg,
+      </if>
+      <if test="validCode != null">
+        valid_code,
+      </if>
+      <if test="payToken != null">
+        pay_token,
+      </if>
+      <if test="tr2ResponseCode != null">
+        tr2_response_code,
+      </if>
+      <if test="tr2ResponseMsg != null">
+        tr2_response_msg,
+      </if>
+      <if test="submitDate != null">
+        submit_date,
+      </if>
+      <if test="tr2BindDate != null">
+        tr2_bind_date,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="updateBy != null">
+        update_by,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="requestId != null">
+        #{requestId,jdbcType=VARCHAR},
+      </if>
+      <if test="appId != null">
+        #{appId,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="fundId != null">
+        #{fundId,jdbcType=VARCHAR},
+      </if>
+      <if test="accountName != null">
+        #{accountName,jdbcType=VARCHAR},
+      </if>
+      <if test="cardNo != null">
+        #{cardNo,jdbcType=VARCHAR},
+      </if>
+      <if test="idType != null">
+        #{idType,jdbcType=VARCHAR},
+      </if>
+      <if test="idNo != null">
+        #{idNo,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null">
+        #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="customerId != null">
+        #{customerId,jdbcType=VARCHAR},
+      </if>
+      <if test="externalRefNumber != null">
+        #{externalRefNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="expiredDate != null">
+        #{expiredDate,jdbcType=VARCHAR},
+      </if>
+      <if test="cvv2 != null">
+        #{cvv2,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=TINYINT},
+      </if>
+      <if test="valid != null">
+        #{valid,jdbcType=TINYINT},
+      </if>
+      <if test="storablePan != null">
+        #{storablePan,jdbcType=VARCHAR},
+      </if>
+      <if test="token != null">
+        #{token,jdbcType=VARCHAR},
+      </if>
+      <if test="tr1ResponseCode != null">
+        #{tr1ResponseCode,jdbcType=VARCHAR},
+      </if>
+      <if test="tr1ResponseMsg != null">
+        #{tr1ResponseMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="validCode != null">
+        #{validCode,jdbcType=VARCHAR},
+      </if>
+      <if test="payToken != null">
+        #{payToken,jdbcType=VARCHAR},
+      </if>
+      <if test="tr2ResponseCode != null">
+        #{tr2ResponseCode,jdbcType=VARCHAR},
+      </if>
+      <if test="tr2ResponseMsg != null">
+        #{tr2ResponseMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="submitDate != null">
+        #{submitDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tr2BindDate != null">
+        #{tr2BindDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateBy != null">
+        #{updateBy,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>

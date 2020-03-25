@@ -9,45 +9,48 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring-boot-demo-actuator" />
-        <module name="spring-boot-demo-admin-client" />
-        <module name="spring-boot-demo-admin-server" />
-        <module name="spring-boot-demo-async" />
-        <module name="spring-boot-demo-cache-ehcache" />
-        <module name="spring-boot-demo-cache-redis" />
-        <module name="spring-boot-demo-codegen" />
-        <module name="spring-boot-demo-dynamic-datasource" />
-        <module name="spring-boot-demo-email" />
-        <module name="spring-boot-demo-exception-handler" />
-        <module name="spring-boot-demo-helloworld" />
-        <module name="spring-boot-demo-ldap" />
-        <module name="spring-boot-demo-log-aop" />
-        <module name="spring-boot-demo-logback" />
-        <module name="spring-boot-demo-multi-datasource-jpa" />
         <module name="spring-boot-demo-multi-datasource-mybatis" />
-        <module name="spring-boot-demo-mybatis-generator" />
-        <module name="spring-boot-demo-orm-beetlsql" />
-        <module name="spring-boot-demo-orm-jdbctemplate" />
-        <module name="spring-boot-demo-orm-jpa" />
-        <module name="spring-boot-demo-orm-mybatis" />
-        <module name="spring-boot-demo-orm-mybatis-mapper-page" />
-        <module name="spring-boot-demo-orm-mybatis-plus" />
-        <module name="spring-boot-demo-properties" />
-        <module name="spring-boot-demo-ratelimit-guava" />
-        <module name="spring-boot-demo-ratelimit-redis" />
-        <module name="spring-boot-demo-rbac-security" />
-        <module name="spring-boot-demo-session" />
-        <module name="spring-boot-demo-sharding-jdbc" />
-        <module name="spring-boot-demo-swagger" />
-        <module name="spring-boot-demo-swagger-beauty" />
-        <module name="spring-boot-demo-task" />
-        <module name="spring-boot-demo-task-quartz" />
-        <module name="spring-boot-demo-war" />
+        <module name="db-server" />
         <module name="spring-boot-demo-websocket" />
+        <module name="spring-boot-demo-email" />
+        <module name="spring-boot-demo-log-aop" />
+        <module name="spring-boot-demo-properties" />
+        <module name="spring-boot-demo-async" />
+        <module name="spring-boot-demo-orm-mybatis" />
+        <module name="spring-boot-demo-session" />
+        <module name="spring-boot-demo-logback" />
+        <module name="spring-boot-demo-sharding-jdbc" />
+        <module name="spring-boot-demo-helloworld" />
+        <module name="spring-boot-demo-swagger-beauty" />
+        <module name="spring-boot-demo-orm-beetlsql" />
+        <module name="spring-boot-demo-task-quartz" />
+        <module name="spring-boot-demo-admin-server" />
+        <module name="spring-boot-demo-ratelimit-redis" />
+        <module name="spring-boot-demo-dynamic-datasource" />
+        <module name="spring-boot-demo-swagger" />
+        <module name="spring-boot-demo-multi-datasource-jpa" />
+        <module name="spring-boot-demo-orm-jpa" />
+        <module name="spring-boot-demo-task" />
+        <module name="spring-boot-demo-rbac-security" />
+        <module name="spring-boot-demo-actuator" />
+        <module name="spring-boot-demo-orm-jdbctemplate" />
+        <module name="spring-boot-demo-cache-ehcache" />
+        <module name="spring-boot-demo-mybatis-generator" />
+        <module name="spring-boot-demo-dbserver" />
+        <module name="spring-boot-demo-war" />
+        <module name="spring-boot-demo-orm-mybatis-plus" />
+        <module name="spring-boot-demo-orm-mybatis-mapper-page" />
+        <module name="spring-boot-demo-codegen" />
+        <module name="spring-boot-demo-admin-client" />
         <module name="spring-boot-demo-websocket-socketio" />
+        <module name="spring-boot-demo-ratelimit-guava" />
+        <module name="spring-boot-demo-ldap" />
+        <module name="spring-boot-demo-exception-handler" />
+        <module name="spring-boot-demo-cache-redis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="db-server" target="1.7" />
       <module name="spring-boot-demo-admin-b" target="1.8" />
       <module name="spring-boot-demo-admin-c" target="1.7" />
       <module name="spring-boot-demo-admin-d" target="1.7" />
@@ -56,5 +59,10 @@
       <module name="spring-boot-demo-helloworld2" target="1.7" />
       <module name="springbootdemoadmina" target="1.7" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="spring-boot-demo-dbserver" options="-parameters" />
+    </option>
   </component>
 </project>
