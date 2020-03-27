@@ -40,7 +40,7 @@
         <module>spring-boot-demo-codegen</module>
         <module>spring-boot-demo-ratelimit-redis</module>
         <module>spring-boot-demo-mybatis-generator</module>
-        <module>db-server</module>
+        <module>spring-boot-demo-dbserver</module>
     </modules>
 
     <packaging>pom</packaging>
