@@ -36,6 +36,7 @@
         <module name="spring-boot-demo-admin-server" />
         <module name="spring-boot-demo-orm-jdbctemplate" />
         <module name="spring-boot-demo-cache-ehcache" />
+        <module name="spring-boot-demo-mytool" />
         <module name="spring-boot-demo-actuator" />
         <module name="spring-boot-demo-mybatis-generator" />
         <module name="spring-boot-demo-dbserver" />

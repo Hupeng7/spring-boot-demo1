@@ -1,4 +1,4 @@
-package com.example.springbootdemodbserver.utils.retryutils;
+package com.example.springbootdemomytool.utils.retryutils;
 
 import java.util.concurrent.TimeUnit;
 

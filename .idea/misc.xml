@@ -43,6 +43,7 @@
         <option value="$PROJECT_DIR$/spring-boot-demo-rbac-security/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-demo-mybatis-generator/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-demo-dbserver/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-demo-mytool/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

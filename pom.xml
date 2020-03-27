@@ -41,6 +41,7 @@
         <module>spring-boot-demo-ratelimit-redis</module>
         <module>spring-boot-demo-mybatis-generator</module>
         <module>spring-boot-demo-dbserver</module>
+        <module>spring-boot-demo-mytool</module>
     </modules>
 
     <packaging>pom</packaging>

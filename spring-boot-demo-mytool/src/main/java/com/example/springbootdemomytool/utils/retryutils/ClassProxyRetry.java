@@ -1,4 +1,4 @@
-package com.example.springbootdemodbserver.utils.retryutils;
+package com.example.springbootdemomytool.utils.retryutils;
 
 import com.google.common.util.concurrent.Uninterruptibles;
 import lombok.extern.slf4j.Slf4j;

@@ -1,6 +1,6 @@
-package com.example.springbootdemodbserver;
+package com.example.springbootdemomytool;
 
-import com.example.springbootdemodbserver.utils.retryutils.SpringRetryDemoService;
+import com.example.springbootdemomytool.utils.retryutils.SpringRetryDemoService;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @Date 2020/3/27 15:39
  * @Version 1.0
  */
-public class SpringRetryDemoServiceTest extends SpringBootDemoDbserverApplicationTests {
+public class SpringRetryDemoServiceTest extends SpringBootDemoMytoolApplicationTests {
 
     @Autowired
     private SpringRetryDemoService springRetryDemoService;
