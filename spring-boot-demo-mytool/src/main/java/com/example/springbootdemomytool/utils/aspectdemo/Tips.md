@@ -275,7 +275,7 @@ public class WebLogAspect {
 在切点之前，@Order 从小到大被执行，也就是说越小的优先级越高；
 在切点之后，@Order 从大到小被执行，也就是说越大的优先级越高；
 
-测试：
+#### 测试：
 一般接口：
 Key：Content-Type
 Value：application/json
@@ -285,3 +285,373 @@ Value：application/json
 Key：Content-Type
 Value：multipart/form-data
 [{"key":"Content-Type","value":"multipart/form-data","description":"","enabled":true}]
+
+### 知识点：
+面向切面的本质：定义切面类并将切面类的功能织入到目标类中；
+
+实现方式：将切面应用到目标对象从而创建一个新的代理对象的过程。替换；
+
+ 
+
+使用注解@Aspect来定义一个切面，在切面中定义切入点(@Pointcut),通知类型(@Before, @AfterReturning,@After,@AfterThrowing,@Around). 
+
+https://www.cnblogs.com/oumyye/p/4480196.html
+
+ 
+
+现将图6-6中涉及到的一些概念解释如下。
+
+切面（Aspect）：
+其实就是共有功能的实现。如日志切面、权限切面、事务切面等。在实际应用中通常是一个存放共有功能实现的普通Java类，之所以能被AOP容器识别成切面，是在配置中指定的。
+
+切面：织入类
+
+@Aspect
+
+public class MyAspect {}
+
+ 
+
+通知（Advice）：
+是切面的具体实现。以目标方法为参照点，根据放置的地方不同，可分为前置通知（Before）、后置通知（AfterReturning）、异常通知（AfterThrowing）、最终通知（After）与环绕通知（Around）5种。在实际应用中通常是切面类中的一个方法，具体属于哪类通知，同样是在配置中指定的。
+
+通知：织入类的事件；
+
+@Aspect
+
+@Component
+
+public class LogInterceptor {
+
+    @Pointcut("execution(public * com.oumyye.service..*.add(..))")
+
+    public void myMethod(){};
+
+    
+
+    /*@Before("execution(public void com.oumyye.dao.impl.UserDAOImpl.save(com.oumyye.model.User))")*/
+
+    @Before("myMethod()")
+
+    public void before() {
+
+        System.out.println("method staet");
+
+    } 
+
+    @After("myMethod()")
+
+    public void after() {
+
+        System.out.println("method after");
+
+    } 
+
+    @AfterReturning("execution(public * com.oumyye.dao..*.*(..))")
+
+    public void AfterReturning() {
+
+        System.out.println("method AfterReturning");
+
+    } 
+
+    @AfterThrowing("execution(public * com.oumyye.dao..*.*(..))")
+
+    public void AfterThrowing() {
+
+        System.out.println("method AfterThrowing");
+
+    } 
+
+}
+
+ 
+
+通知传递参数
+
+在Spring AOP中，除了execution和bean指示符不能传递参数给通知方法，其他指示符都可以将匹配的方法相应参数或对象自动传递给通知方法。获取到匹配的方法参数后通过”argNames”属性指定参数名。如下，需要注意的是args(指示符)、argNames的参数名与before()方法中参数名 必须保持一致即param。
+
+@Before(value="args(param)", argNames="param") //明确指定了    
+
+public void before(int param) {    
+
+    System.out.println("param:" + param);    
+
+}  
+
+ 
+
+连接点（Joinpoint）：
+就是程序在运行过程中能够插入切面的地点。例如，方法调用、异常抛出或字段修改等，但Spring只支持方法级的连接点。
+
+连接点：目标类+目标函数；用于切面类在运行时获取目标对象+函数+参量上下文信息；
+
+@Around("execution(* com.zejian.spring.springAop.dao.UserDao.addUser(..))")
+
+    public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
+
+        System.out.println("环绕通知前....");
+
+        Object obj= (Object) joinPoint.proceed();
+
+        System.out.println("环绕通知后....");
+
+        return obj;
+
+    }
+
+ 
+
+切入点（Pointcut）：
+用于定义通知应该切入到哪些连接点上。不同的通知通常需要切入到不同的连接点上，这种精准的匹配是由切入点的正则表达式来定义的。
+
+切入点：在哪里（什么样函数）织入；用于在切面中注解织入到哪些范围的哪些函数上；
+
+定义过滤切入点函数时，直接把execution以定义匹配表达式作为值传递给通知类型的如下：
+
+@After(value="execution(* com.zejian.spring.springAop.dao.UserDao.addUser(..))")
+
+  public void after(){
+
+      System.out.println("最终通知....");
+
+  } 
+
+采用与ApectJ中使用pointcut关键字类似的方式定义切入点表达式如下，使用@Pointcut注解：
+
+@Pointcut("execution(* com.zejian.spring.springAop.dao.UserDao.addUser(..))")
+
+private void myPointcut(){}
+
+@After(value="myPointcut()")
+
+public void afterDemo(){
+
+    System.out.println("最终通知....");
+
+} 
+
+切入点指示符
+
+为了方法通知应用到相应过滤的目标方法上，SpringAOP提供了匹配表达式，这些表达式也叫切入点指示符，在前面的案例中，它们已多次出现。
+
+通配符
+
+在定义匹配表达式时，通配符几乎随处可见，如*、.. 、+ ，它们的含义如下：
+
+.. ：匹配方法定义中的任意数量的参数，此外还匹配类定义中的任意数量包
+//任意返回值，任意名称，任意参数的公共方法
+execution(public * *(..))
+//匹配com.zejian.dao包及其子包中所有类中的所有方法
+within(com.zejian.dao..*) 
+＋ ：匹配给定类的任意子类
+//DaoUserwithin(com.zejian.dao.DaoUser+) 
+＊ ：匹配任意数量的字符
+匹配包及其子包中所有类的所有方法
+within(com.zejian.service..*)
+//匹配以set开头，参数为int类型，任意返回值的方法
+execution(* set*(int)) 
+ 
+
+execution 用于匹配方法执行的连接点;
+
+within 用于匹配指定类型内的方法执行;
+
+ 
+
+目标对象（Target）：
+就是那些即将切入切面的对象，也就是那些被通知的对象。这些对象中已经只剩下干干净净的核心业务逻辑代码了，所有的共有功能代码等待AOP容器的切入。
+
+目标对象：目标类
+
+<!-- 定义目标对象 -->
+
+    <bean id="userDaos" class="com.zejian.spring.springAop.dao.daoimp.UserDaoImp" />
+
+ 
+
+代理对象（Proxy）：
+将通知应用到目标对象之后被动态创建的对象。可以简单地理解为，代理对象的功能等于目标对象的核心业务逻辑功能加上共有功能。代理对象对于使用者而言是透明的，是程序运行过程中的产物。
+
+代理对象：目标类织入切面功能后的中间层（类）
+
+ 
+
+织入（Weaving）：
+将切面应用到目标对象从而创建一个新的代理对象的过程。这个过程可以发生在编译期、类装载期及运行期，当然不同的发生点有着不同的前提条件。譬如发生在编译期的话，就要求有一个支持这种AOP实现的特殊编译器；发生在类装载期，就要求有一个支持AOP实现的特殊类装载器；只有发生在运行期，则可直接通过Java语言的反射机制与动态代理机制来动态实现。
+
+织入：织入的实现方式；
+
+ 
+
+https://blog.csdn.net/liujiahan629629/article/details/18864211
+
+ 
+
+ 
+
+基于XML的开发
+
+前面分析完基于注解支持的开发是日常应用中最常见的，即使如此我们还是有必要了解一下基于xml形式的Spring AOP开发，这里会以一个案例的形式对xml的开发形式进行简要分析，定义一个切面类
+
+copycode.gif
+
+/**
+
+ * Created by zejian on 2017/2/20.*/
+
+public class MyAspectXML {
+
+ 
+
+    public void before(){
+
+        System.out.println("MyAspectXML====前置通知");
+
+    }
+
+ 
+
+    public void afterReturn(Object returnVal){
+
+        System.out.println("后置通知-->返回值:"+returnVal);
+
+    }
+
+ 
+
+    public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
+
+        System.out.println("MyAspectXML=====环绕通知前");
+
+        Object object= joinPoint.proceed();
+
+        System.out.println("MyAspectXML=====环绕通知后");
+
+        return object;
+
+    }
+
+ 
+
+    public void afterThrowing(Throwable throwable){
+
+        System.out.println("MyAspectXML======异常通知:"+ throwable.getMessage());
+
+    }
+
+ 
+
+    public void after(){
+
+        System.out.println("MyAspectXML=====最终通知..来了");
+
+    }
+
+} 
+
+copycode.gif
+
+通过配置文件的方式声明如下（spring-aspectj-xml.xml）：
+
+copycode.gif
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xmlns:aop="http://www.springframework.org/schema/aop"
+
+       xmlns:context="http://www.springframework.org/schema/context"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+
+        http://www.springframework.org/schema/aop
+
+        http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+ 
+
+    <!--<context:component-scan base-package=""-->
+
+ 
+
+    <!-- 定义目标对象 -->
+
+    <bean name="productDao" class="com.zejian.spring.springAop.dao.daoimp.ProductDaoImpl" />
+
+ 
+
+    <!-- 定义切面 -->
+
+    <bean name="myAspectXML" class="com.zejian.spring.springAop.AspectJ.MyAspectXML" />
+
+    <!-- 配置AOP 切面 -->
+
+    <aop:config>
+
+        <!-- 定义切点函数 -->
+
+        <aop:pointcut id="pointcut" expression="execution(* com.zejian.spring.springAop.dao.ProductDao.add(..))" />
+
+ 
+
+        <!-- 定义其他切点函数 -->
+
+        <aop:pointcut id="delPointcut" expression="execution(* com.zejian.spring.springAop.dao.ProductDao.delete(..))" />
+
+ 
+
+        <!-- 定义通知 order 定义优先级,值越小优先级越大-->
+
+        <aop:aspect ref="myAspectXML" order="0">
+
+            <!-- 定义通知
+
+            method 指定通知方法名,必须与MyAspectXML中的相同
+
+            pointcut 指定切点函数
+
+            -->
+
+            <aop:before method="before" pointcut-ref="pointcut" />
+
+ 
+
+            <!-- 后置通知  returning="returnVal" 定义返回值 必须与类中声明的名称一样-->
+
+            <aop:after-returning method="afterReturn" pointcut-ref="pointcut"  returning="returnVal" />
+
+ 
+
+            <!-- 环绕通知 -->
+
+            <aop:around method="around" pointcut-ref="pointcut"  />
+
+ 
+
+            <!--异常通知 throwing="throwable" 指定异常通知错误信息变量,必须与类中声明的名称一样-->
+
+            <aop:after-throwing method="afterThrowing" pointcut-ref="pointcut" throwing="throwable"/>
+
+ 
+
+            <!--
+
+                 method : 通知的方法(最终通知)
+
+                 pointcut-ref : 通知应用到的切点方法
+
+                -->
+
+            <aop:after method="after" pointcut-ref="pointcut"/>
+
+        </aop:aspect>
+
+    </aop:config>
+
+beans 
+
+copycode.gif
+
+声明方式和定义方式在代码中已很清晰了，了解一下即可，在实际开发中，会更倾向与使用注解的方式开发
