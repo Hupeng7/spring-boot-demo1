@@ -7,7 +7,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
  * @ClassName InterceptorConfig
- * @Description TODO
+ * @Description
+ * 注意：这边用的springboot是2.0.x，采取的是直接实现WebMvcConfigurer，
+ * 因为WebMvcConfigurerAdapter被标识了@Deprecated，就没有继承WebMvcConfigurerAdapter了
  * @Author Leo
  * @Date 2020/3/30 12:03
  * @Version 1.0
