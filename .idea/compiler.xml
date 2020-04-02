@@ -16,35 +16,36 @@
         <module name="spring-boot-demo-email" />
         <module name="spring-boot-demo-websocket-socketio" />
         <module name="spring-boot-demo-properties" />
+        <module name="spring-boot-demo-orm-mybatis-mapper-page" />
         <module name="spring-boot-demo-async" />
         <module name="spring-boot-demo-orm-mybatis" />
         <module name="spring-boot-demo-task-quartz" />
         <module name="spring-boot-demo-logback" />
-        <module name="spring-boot-demo-sharding-jdbc" />
         <module name="spring-boot-demo-helloworld" />
         <module name="spring-boot-demo-filter-interceptor" />
         <module name="spring-boot-demo-swagger-beauty" />
         <module name="spring-boot-demo-orm-beetlsql" />
-        <module name="spring-boot-demo-admin-server" />
+        <module name="spring-boot-demo-multi-datasource-jpa" />
         <module name="spring-boot-demo-ratelimit-redis" />
         <module name="spring-boot-demo-dynamic-datasource" />
         <module name="spring-boot-demo-swagger" />
-        <module name="spring-boot-demo-log-aop" />
-        <module name="spring-boot-demo-multi-datasource-jpa" />
+        <module name="spring-boot-demo-codegen" />
+        <module name="spring-boot-common" />
         <module name="spring-boot-demo-orm-jpa" />
         <module name="spring-boot-demo-task" />
         <module name="spring-boot-demo-session" />
         <module name="spring-boot-demo-rbac-security" />
-        <module name="spring-boot-demo-actuator" />
+        <module name="spring-boot-demo-admin-server" />
         <module name="spring-boot-demo-dbserver" />
         <module name="spring-boot-demo-cache-ehcache" />
         <module name="spring-boot-demo-mytool" />
+        <module name="spring-boot-demo-actuator" />
         <module name="spring-boot-demo-mybatis-generator" />
         <module name="spring-boot-demo-orm-jdbctemplate" />
         <module name="spring-boot-demo-orm-mybatis-plus" />
-        <module name="spring-boot-demo-orm-mybatis-mapper-page" />
+        <module name="spring-boot-demo-log-aop" />
         <module name="spring-boot-demo-war" />
-        <module name="spring-boot-demo-codegen" />
+        <module name="spring-boot-demo-sharding-jdbc" />
         <module name="spring-boot-demo-admin-client" />
         <module name="spring-boot-demo-ratelimit-guava" />
         <module name="spring-boot-demo-ldap" />
@@ -65,6 +66,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="spring-boot-common" options="" />
       <module name="spring-boot-demo-dbserver" options="" />
     </option>
   </component>

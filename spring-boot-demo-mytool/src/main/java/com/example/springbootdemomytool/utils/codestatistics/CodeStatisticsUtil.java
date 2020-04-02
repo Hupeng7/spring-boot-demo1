@@ -19,8 +19,8 @@ public class CodeStatisticsUtil {
 //        String path = file.replace("target/tet-classes", "src");
         // 目标路径
         String path = "D://javapro//fund-pay//";
-        ArrayList<File> fileArrayList = getFile(new File(path));
-        for (File f : fileArrayList) {
+        ArrayList<File> files = getFile(new File(path));
+        for (File f : files) {
             if (f.getName().matches(".*\\.kt")) {
                 count(f);
                 System.out.println(f);

@@ -1,7 +1,7 @@
 package com.example.springbootdemomytool.utils.restfuldemo.aspect;
 
 import com.example.springbootdemomytool.utils.restfuldemo.beans.ResultBean;
-import com.sun.xml.internal.ws.api.model.CheckedException;
+import com.example.springbootdemomytool.utils.restfuldemo.exceptions.CheckException;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -42,8 +42,9 @@ public class ControllerAspect {
      * 其中WebLog为注解名称
      */
     // @Pointcut("execution(public * com.example.springbootdemomytool.utils.restfuldemo.controller.TestAopController.*(..))")
-    @Pointcut("execution(public * com.example.springbootdemomytool.utils.restfuldemo..*(..))")
-    public void ControllerAspect() {}
+    @Pointcut("execution(public * com.example.springbootdemomytool.utils.restfuldemo.controller..*(..))")
+    public void ControllerAspect() {
+    }
 
     @Around("ControllerAspect()")
     public Object handlerControllerMethod(ProceedingJoinPoint joinPoint) {
@@ -62,7 +63,8 @@ public class ControllerAspect {
     private ResultBean<?> handlerException(ProceedingJoinPoint joinPoint, Throwable e) {
         ResultBean<?> resultBean = new ResultBean<>();
 
-        if (e instanceof CheckedException) {
+        // 校验出错，参数非法
+        if (e instanceof CheckException || e instanceof IllegalArgumentException) {
             resultBean.setMsg(e.getLocalizedMessage());
             resultBean.setCode(ResultBean.FAIL);
         } else {
