@@ -53,16 +53,6 @@
         <module name="spring-boot-demo-cache-redis" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="db-server" target="1.7" />
-      <module name="spring-boot-demo-admin-b" target="1.8" />
-      <module name="spring-boot-demo-admin-c" target="1.7" />
-      <module name="spring-boot-demo-admin-d" target="1.7" />
-      <module name="spring-boot-demo-hello" target="1.8" />
-      <module name="spring-boot-demo-helloword1" target="1.7" />
-      <module name="spring-boot-demo-helloworld2" target="1.7" />
-      <module name="springbootdemoadmina" target="1.7" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
