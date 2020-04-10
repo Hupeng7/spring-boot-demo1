@@ -142,8 +142,6 @@ public class ReflectClassDemo1 {
         } catch (InvocationTargetException e) {
             e.printStackTrace();
         }
-
-
     }
 
 
