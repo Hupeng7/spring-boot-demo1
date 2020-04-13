@@ -82,6 +82,7 @@
             <version>2.8.5</version>
         </dependency>
 
+        <!--web依赖包，web应用必备-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -151,11 +152,11 @@
 
         <!-- aop -->
         <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
-<!--        <dependency>-->
-<!--            <groupId>org.aspectj</groupId>-->
-<!--            <artifactId>aspectjweaver</artifactId>-->
-<!--            <version>1.8.10</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.aspectj</groupId>-->
+        <!--            <artifactId>aspectjweaver</artifactId>-->
+        <!--            <version>1.8.10</version>-->
+        <!--        </dependency>-->
 
         <!-- Test -->
         <dependency>
@@ -165,11 +166,11 @@
             <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-core -->
-<!--        <dependency>-->
-<!--            <groupId>org.apache.tomcat.embed</groupId>-->
-<!--            <artifactId>tomcat-embed-core</artifactId>-->
-<!--            <version>9.0.2</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.apache.tomcat.embed</groupId>-->
+        <!--            <artifactId>tomcat-embed-core</artifactId>-->
+        <!--            <version>9.0.2</version>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>

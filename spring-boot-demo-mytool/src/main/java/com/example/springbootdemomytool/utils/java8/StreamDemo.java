@@ -45,10 +45,10 @@ public class StreamDemo {
         studentInfoList.forEach(e -> System.out.println(e.getName()));
 
         System.out.println("按照 age 进行排序 方法一 正序");
-        studentInfoList.sort((o1, o2) -> o1.getAge().compareTo(o2.getAge())); // 正序
+        studentInfoList.sort((o1, o2) -> o1.getAge().compareTo(o2.getAge())); // 正序  o1 o2 o1 o2前后一致表正序
         StudentInfo.printStudents(studentInfoList);
         System.out.println("按照 age 进行排序 方法一 倒序");
-        studentInfoList.sort((o1, o2) -> o2.getAge().compareTo(o1.getAge())); // 倒序
+        studentInfoList.sort((o1, o2) -> o2.getAge().compareTo(o1.getAge())); // 倒序  o1 o2 o2 o1前后不一致表倒序
         StudentInfo.printStudents(studentInfoList);
 
         System.out.println("按照 age 进行排序 方法二 正序");
