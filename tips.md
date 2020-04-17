@@ -159,3 +159,6 @@ CREATE  TABLE  `short_url_map` (
 https://www.cnblogs.com/rjzheng/p/11827426.html
 https://time.geekbang.org/column/article/80850
 ```
+
+#### 通用项目骨架
+`项目地址&使用文档：https://github.com/lihengming/spring-boot-api-project-seed 。`
