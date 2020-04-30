@@ -24,10 +24,13 @@ public class StreamDemo {
         studentInfoList.add(new StudentInfo("zhangxiaoli", false, 18, 1.61, LocalDate.of(2001, 6, 3)));
         studentInfoList.add(new StudentInfo("wangdaming", true, 19, 1.82, LocalDate.of(2000, 3, 11)));
         studentInfoList.add(new StudentInfo("chenxiaopao", false, 17, 1.67, LocalDate.of(2002, 10, 18)));
-        test1(studentInfoList);
+        // test1(studentInfoList);
 
         System.out.println("===============================");
-        test2(studentInfoList);
+        //test2(studentInfoList);
+        //test3(studentInfoList);
+        List<StudentInfo> studentInfoList1 = studentInfoList.subList(0,22); // Exception in thread "main" java.lang.IndexOutOfBoundsException: toIndex = 22
+        StudentInfo.printStudents(studentInfoList1);
     }
 
     private static void test1(List<StudentInfo> studentInfoList) {
@@ -107,5 +110,17 @@ public class StreamDemo {
         for (Integer key : collect.keySet()) {
             System.out.println(key + "= " + collect.get(key));
         }
+    }
+
+    private static void test3(List<StudentInfo> studentInfoList) {
+        List<StudentInfo> boys = studentInfoList.stream()
+                .sorted((o1, o2) -> {
+                    Integer sort1 = o1.getAge();
+                    Integer sort2 = o2.getAge();
+                    return Integer.compare(sort2, sort1);
+                })
+                .collect(Collectors.toList());
+
+        StudentInfo.printStudents(boys);
     }
 }

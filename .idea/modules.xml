@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/kotlin-demo/kotlin-demo.iml" filepath="$PROJECT_DIR$/kotlin-demo/kotlin-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-demo-effective-java-3rd/spring-boot-demo-effective-java-3rd.iml" filepath="$PROJECT_DIR$/spring-boot-demo-effective-java-3rd/spring-boot-demo-effective-java-3rd.iml" />
     </modules>
   </component>
 </project>
