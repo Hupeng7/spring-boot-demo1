@@ -44,6 +44,7 @@
         <module>spring-boot-demo-mytool</module>
         <module>spring-boot-demo-filter-interceptor</module>
         <module>spring-boot-common</module>
+        <module>spring-boot-demo-statemachine</module>
     </modules>
 
     <packaging>pom</packaging>

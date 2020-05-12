@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 /**
  * @ClassName LogCostFilter
@@ -16,6 +17,8 @@ import java.io.IOException;
  * @Version 1.0
  */
 public class LogCostFilter implements Filter {
+
+    String chr = String.valueOf(StandardCharsets.UTF_8);
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {

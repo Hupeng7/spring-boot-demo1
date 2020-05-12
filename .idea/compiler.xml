@@ -26,6 +26,7 @@
         <module name="spring-boot-demo-filter-interceptor" />
         <module name="spring-boot-demo-swagger-beauty" />
         <module name="spring-boot-demo-orm-beetlsql" />
+        <module name="spring-boot-demo-statemachine" />
         <module name="spring-boot-demo-multi-datasource-jpa" />
         <module name="spring-boot-demo-ratelimit-redis" />
         <module name="spring-boot-demo-dynamic-datasource" />
@@ -60,6 +61,7 @@
       <module name="spring-boot-common" options="" />
       <module name="spring-boot-demo-dbserver" options="" />
       <module name="spring-boot-demo-effective-java-3rd" options="" />
+      <module name="spring-boot-demo-statemachine" options="" />
     </option>
   </component>
 </project>

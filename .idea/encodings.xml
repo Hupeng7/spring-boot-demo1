@@ -113,6 +113,8 @@
     <file url="file://$PROJECT_DIR$/spring-boot-demo-sharding-jdbc" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-demo-sharding-jdbc/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-demo-sharding-jdbc/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-demo-statemachine/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-demo-statemachine/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-demo-swagger" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-demo-swagger-beauty" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-demo-swagger-beauty/src/main/java" charset="UTF-8" />
