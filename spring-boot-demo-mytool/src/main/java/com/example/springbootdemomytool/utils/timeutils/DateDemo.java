@@ -31,6 +31,8 @@ public class DateDemo {
         return calendar.getTime();
     }
 
+    // 方法不能用或过时的方法 使用@Deprecated
+    @Deprecated
     public static Date parseDate(String sDate, String formate) {
         SimpleDateFormat simpleDateFormate = new SimpleDateFormat(formate);
         try {
@@ -55,4 +57,7 @@ public class DateDemo {
             return null;
         }
     }
+
+
+
 }

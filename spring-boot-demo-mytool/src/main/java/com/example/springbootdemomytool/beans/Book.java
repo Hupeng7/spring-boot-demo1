@@ -1,5 +1,7 @@
 package com.example.springbootdemomytool.beans;
 
+import java.io.Serializable;
+
 /**
  * @ClassName Book
  * @Description TODO
@@ -7,8 +9,9 @@ package com.example.springbootdemomytool.beans;
  * @Date 2020/4/8 18:51
  * @Version 1.0
  */
-public class Book {
+public class Book implements Serializable {
 
+    private static final long serialVersionUID = 1482478598184626484L;
     private final static String TAG = "BookTag";
 
     private String name;

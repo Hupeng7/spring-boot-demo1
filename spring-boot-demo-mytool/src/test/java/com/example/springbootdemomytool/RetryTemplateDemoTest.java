@@ -18,7 +18,7 @@ public class RetryTemplateDemoTest extends SpringBootDemoMytoolApplicationTests 
     @Autowired
     private RetryTemplateDemo retryTemplateDemo;
 
-    @Test
+    // @Test
     public void retry() {
         RetryTemplate retryTemplate = retryTemplateDemo.retryTemplate();
         retryTemplate.execute((RetryCallback<Void, RuntimeException>) context -> {

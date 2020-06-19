@@ -16,7 +16,7 @@ public class SpringRetryDemoServiceTest extends SpringBootDemoMytoolApplicationT
     @Autowired
     private SpringRetryDemoService springRetryDemoService;
 
-    @Test
+    // @Test
     public void retry() {
         int count = springRetryDemoService.retry(-1);
         System.out.println("库存为：" + count);

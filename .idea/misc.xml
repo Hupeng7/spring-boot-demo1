@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="EntryPointsManager">
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="org.springframework.beans.factory.annotation.Autowired" />
+    </list>
+  </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/spring-boot-demo-helloworld2" />
@@ -48,6 +53,7 @@
         <option value="$PROJECT_DIR$/spring-boot-common/pom.xml" />
         <option value="$PROJECT_DIR$/effective-java-3rd/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-demo-statemachine/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-contract-demo/pom.xml" />
       </list>
     </option>
   </component>
