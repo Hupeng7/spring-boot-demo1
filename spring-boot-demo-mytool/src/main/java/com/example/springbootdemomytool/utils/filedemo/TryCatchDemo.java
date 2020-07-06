@@ -5,6 +5,7 @@ import java.io.*;
 /**
  * @ClassName TryCatchDemo
  * @Description try-with-resources
+ * try后面括号里的流必须要继承 java.lang.AutoCloseable
  * @Author Leo
  * @Date 2020/6/24 17:11
  * @Version 1.0
@@ -50,6 +51,5 @@ public class TryCatchDemo {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 }
