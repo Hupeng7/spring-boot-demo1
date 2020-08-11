@@ -54,6 +54,10 @@
         <option value="$PROJECT_DIR$/effective-java-3rd/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-demo-statemachine/pom.xml" />
         <option value="$PROJECT_DIR$/spring-cloud-contract-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-demo-guava/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-helloworld-01/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-demo-easyexcel/pom.xml" />
+        <option value="$PROJECT_DIR$/design-patterns/pom.xml" />
       </list>
     </option>
   </component>

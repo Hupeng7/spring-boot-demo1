@@ -16,11 +16,12 @@
         <module name="spring-boot-demo-email" />
         <module name="spring-boot-demo-websocket-socketio" />
         <module name="spring-boot-demo-properties" />
-        <module name="spring-boot-demo-orm-mybatis-mapper-page" />
         <module name="spring-boot-demo-async" />
+        <module name="design-patterns" />
         <module name="spring-boot-demo-orm-mybatis" />
         <module name="spring-boot-demo-task-quartz" />
         <module name="spring-boot-demo-logback" />
+        <module name="spring-boot-demo-sharding-jdbc" />
         <module name="spring-boot-demo-effective-java-3rd" />
         <module name="spring-boot-demo-helloworld" />
         <module name="spring-boot-demo-filter-interceptor" />
@@ -28,10 +29,11 @@
         <module name="spring-boot-demo-orm-beetlsql" />
         <module name="spring-boot-demo-statemachine" />
         <module name="spring-boot-demo-multi-datasource-jpa" />
+        <module name="spring-boot-demo-guava" />
         <module name="spring-boot-demo-ratelimit-redis" />
         <module name="spring-boot-demo-dynamic-datasource" />
         <module name="spring-boot-demo-swagger" />
-        <module name="spring-boot-demo-codegen" />
+        <module name="spring-boot-demo-log-aop" />
         <module name="spring-boot-common" />
         <module name="spring-boot-demo-orm-jpa" />
         <module name="spring-boot-demo-task" />
@@ -44,25 +46,35 @@
         <module name="spring-boot-demo-mytool" />
         <module name="spring-boot-demo-actuator" />
         <module name="spring-boot-demo-mybatis-generator" />
+        <module name="spring-boot-helloworld-01" />
         <module name="spring-boot-demo-orm-jdbctemplate" />
         <module name="spring-boot-demo-orm-mybatis-plus" />
-        <module name="spring-boot-demo-log-aop" />
+        <module name="spring-boot-demo-orm-mybatis-mapper-page" />
         <module name="spring-boot-demo-war" />
-        <module name="spring-boot-demo-sharding-jdbc" />
+        <module name="spring-boot-demo-codegen" />
         <module name="spring-boot-demo-admin-client" />
+        <module name="spring-boot-demo-easyexcel" />
         <module name="spring-boot-demo-ratelimit-guava" />
         <module name="spring-boot-demo-ldap" />
         <module name="spring-boot-demo-exception-handler" />
         <module name="spring-boot-demo-cache-redis" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spring-boot-demo-easy-excel" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="design-patterns" options="-parameters" />
       <module name="spring-boot-common" options="" />
       <module name="spring-boot-demo-dbserver" options="" />
+      <module name="spring-boot-demo-easy-excel" options="" />
+      <module name="spring-boot-demo-easyexcel" options="" />
       <module name="spring-boot-demo-effective-java-3rd" options="" />
+      <module name="spring-boot-demo-guava" options="" />
       <module name="spring-boot-demo-statemachine" options="" />
+      <module name="spring-boot-helloworld-01" options="-parameters" />
       <module name="spring-cloud-contract-demo" options="-parameters" />
     </option>
   </component>

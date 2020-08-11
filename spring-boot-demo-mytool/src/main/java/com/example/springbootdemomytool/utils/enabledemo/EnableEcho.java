@@ -9,6 +9,6 @@ import java.lang.annotation.*;
 @Documented
 @Import(BamuImportBeanDefinitionRegistrar.class)
 public @interface EnableEcho {
-    // 传入报名
+    // 传入包名
     String[] packages() default "";
 }

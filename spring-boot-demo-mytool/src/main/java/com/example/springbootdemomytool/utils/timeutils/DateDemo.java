@@ -17,7 +17,29 @@ public class DateDemo {
     public static void main(String[] args) {
 //        Date d = parseDate("2020/4/18", "yyyy/MM/dd");
 //        System.out.println("d---" + d);
-        System.out.println(convert2theN("2020-5-7", -11,"yyyy-MM-dd"));
+        //System.out.println(convert2theN("2020-5-7", -11,"yyyy-MM-dd"));
+
+        Date d1 = parseDate("2020-07-28","yyyy-MM-dd");
+       // Date d2 = parseDate("2020-07-28 12:00:00","yyyy-MM-dd HH:mm:ss");
+        Date d2 = parseDate("2020-07-28","yyyy-MM-dd");
+        System.out.println("d1:"+d1);
+        System.out.println("d2:"+d2);
+        boolean after = d2.after(d1);
+        boolean before = d2.before(d1);
+        System.out.println("after:"+after);
+        System.out.println("before:"+before);
+    }
+
+    public static Date getDateFormat(Date date, String format) {
+        if (date == null) {
+            return null;
+        }
+        try {
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat(format);
+            return simpleDateFormat.parse(simpleDateFormat.format(date));
+        } catch (Exception e) {
+            return null;
+        }
     }
 
     public static String getN2CurrentTime(int n) {

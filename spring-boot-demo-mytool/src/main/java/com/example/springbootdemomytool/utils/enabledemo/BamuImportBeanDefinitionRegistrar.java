@@ -28,6 +28,7 @@ public class BamuImportBeanDefinitionRegistrar implements ImportBeanDefinitionRe
         BeanDefinitionBuilder beanDefinitionBuilder = BeanDefinitionBuilder.rootBeanDefinition(EchoBeanPostProcessor.class);
         // 给EchoBeanPostProcessor.class中注入packages
         beanDefinitionBuilder.addPropertyValue("packages",packages);
+
         beanDefinitionRegistry.registerBeanDefinition(EchoBeanPostProcessor.class.getName(),beanDefinitionBuilder.getBeanDefinition());
     }
 }

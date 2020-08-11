@@ -14,6 +14,7 @@ import javax.validation.constraints.Size;
  * @Version 1.0
  */
 @Data
+//@Builder
 public class User {
     @NotNull(message = "用户id不能为空")
     private Long id;

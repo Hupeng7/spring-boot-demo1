@@ -45,6 +45,7 @@
         <module>spring-boot-demo-filter-interceptor</module>
         <module>spring-boot-common</module>
         <module>spring-boot-demo-statemachine</module>
+        <module>spring-boot-demo-guava</module>
     </modules>
 
     <packaging>pom</packaging>
