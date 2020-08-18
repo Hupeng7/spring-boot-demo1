@@ -7,6 +7,7 @@ import java.io.Externalizable;
 import java.io.IOException;
 import java.io.ObjectInput;
 import java.io.ObjectOutput;
+import java.util.Objects;
 
 /**
  * @ClassName User2
@@ -34,6 +35,24 @@ public class User2 implements Externalizable {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        // 自反性
+        if (this == o) return true;
+        // 任何对象不等于null，比较是否为同一类型
+        if (!(o instanceof User2)) return false;
+        // 强制类型转换
+        User2 user2 = (User2) o;
+        // 比较属性值
+        return getAge() == user2.getAge() &&
+                getName().equals(user2.getName());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getName(), getAge());
     }
 
     @Override
