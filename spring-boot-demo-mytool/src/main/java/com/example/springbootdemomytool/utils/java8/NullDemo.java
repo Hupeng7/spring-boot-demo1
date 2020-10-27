@@ -3,6 +3,7 @@ package com.example.springbootdemomytool.utils.java8;
 import org.junit.Test;
 
 import java.util.Optional;
+import java.util.function.Supplier;
 
 /**
  * @ClassName NullDemo
@@ -52,6 +53,22 @@ public class NullDemo {
                 .map(Nested::getInner)
                 .map(Inner::getFoo)
                 .ifPresent(System.out::println);
+    }
+
+    @Test
+    public void test3() {
+        Outer obj = new Outer();
+        resolve(() -> obj.getNested().getInner().getFoo())
+                .ifPresent(System.out::println);
+    }
+
+    public static <T> Optional<T> resolve(Supplier<T> resolver) {
+        try {
+            T result = resolver.get();
+            return Optional.ofNullable(result);
+        } catch (NullPointerException e) {
+            return Optional.empty();
+        }
     }
 
 }

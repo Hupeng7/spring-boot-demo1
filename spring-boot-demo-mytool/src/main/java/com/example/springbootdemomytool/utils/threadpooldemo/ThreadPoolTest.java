@@ -27,7 +27,12 @@ public class ThreadPoolTest {
          * protected void afterExecute(Runnable r, Throwable t) // 任务执行后被调用
          * protected void terminated() // 线程池结束后被调用
          */
-        ExecutorService executor = new ThreadPoolExecutor(2, 2, 2, TimeUnit.SECONDS, new ArrayBlockingQueue<>(1)) {
+        ExecutorService executor = new ThreadPoolExecutor(
+                2,
+                2,
+                2,
+                TimeUnit.SECONDS,
+                new ArrayBlockingQueue<>(1)) {
             @Override
             protected void beforeExecute(Thread t, Runnable r) {
                 System.out.println("beforeExecute is called");

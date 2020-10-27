@@ -2,17 +2,20 @@ package com.example.springbootdemomytool.utils.java8;
 
 import org.junit.Test;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
  * @ClassName StringNumberMathDemo
- * @Description TODO
+ * @Description
  * @Author Leo
  * @Date 2020/4/15 19:03
  * @Version 1.0
@@ -131,9 +134,34 @@ public class StringNumberMathDemo {
     }
 
     @Test
-    public void testFile3() {
-//        List<String> lines = Files.readAllLines(Paths.get("tips.md"));
-//        lines.add("");
+    public void testFile3() throws IOException {
+        List<String> lines = Files.readAllLines(Paths.get("D:\\project\\spring-boot-demo1\\test.txt"));
+        lines.add("print('foobar');");
+        Files.write(Paths.get("D:\\project\\spring-boot-demo1\\test1.txt"), lines);
+
+        Path path = Paths.get("D:\\project\\spring-boot-demo1\\test1.txt");
+        try (BufferedReader reader = Files.newBufferedReader(path)) {
+            System.out.println(reader.readLine());
+        }
+
+        try (Stream<String> stream = Files.lines(Paths.get("D:\\project\\spring-boot-demo1\\test.txt"))) {
+            stream
+                    .filter(line -> line.contains("print"))
+                    .map(String::trim)
+                    .forEach(System.out::println);
+        }
+
+        try (BufferedWriter writer = Files.newBufferedWriter(path)) {
+            writer.write("print('Hello World');");
+        }
+
+        try (BufferedReader reader = Files.newBufferedReader(path)) {
+            long countPrints = reader
+                    .lines()
+                    .filter(line -> line.contains("print"))
+                    .count();
+            System.out.println(countPrints);
+        }
 
     }
 

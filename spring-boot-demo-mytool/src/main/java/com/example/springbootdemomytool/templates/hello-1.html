@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <style>
+        body {
+            font-size: 14px;
+        }
+
+        tr td {
+            padding-left: 0.8em;
+            text-align: left;
+        }
+
+        tr th {
+            padding: 0.8em;
+        }
+
+        .agreement-title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 2em;
+            padding-top: 1.2em;
+        }
+        .agreement-version {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.5em;
+            padding-top: 1.2em;
+        }
+
+        .firstpart-title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        .secondpart-title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        .license-table {
+            border: 1;
+            border-collapse: collapse;
+            width: 100%;
+            text-align: center;
+        }
+
+        .license-table tr td {
+            padding-left: 0.8em;
+            text-align: center;
+        }
+
+    </style>
+    <title>测试freemarker模板Hello</title>
+
+</head>
+<body style="font-family:simsun;">
+<div class="agreement-title">测试freemarker模板</div>
+<div class="agreement-version">（V20191212-4）</div>
+
+<strong><div style="text-align:right;">合同编号：第【】号 </div></strong><br/>
+<strong><div style="text-align:left;">【${hello}】【${hello}】【${hello}】 </div></strong>
+<strong><div style="text-align:left;">【${hello}】【${hello}】【${hello}】 </div></strong>
+<strong><div style="text-align:left;">【${hello}】【${hello}】【${hello}】 </div></strong>
+<strong><div style="text-align:left;">【${name}】【${age}】【${sex}】 </div></strong>
+<strong>特别提醒：<br/></strong>
+
+<br/>
+
+<strong>&nbsp;&nbsp;证件类型：【】</strong><br/>
+<strong>&nbsp;&nbsp;证件号码：【】</strong><br/>
+<strong>&nbsp;&nbsp;住所：【】</strong><br/>
+<strong>&nbsp;&nbsp;电话：【】</strong><br/>
+
+<br/>
+
+<div align="left" style="padding-right:20px;">
+    &nbsp;&nbsp;（签字）：&nbsp;<br/>
+    <br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;年     月     日 <br/>
+    <br/>
+    &nbsp;&nbsp;（公章）： <br/>
+    <br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;年     月     日 <br/>
+    <br/>
+</div>
+
+
+
+</body>
+
+</html>

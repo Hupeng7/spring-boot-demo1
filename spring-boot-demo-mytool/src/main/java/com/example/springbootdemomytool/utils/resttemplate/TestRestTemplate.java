@@ -153,44 +153,6 @@ public class TestRestTemplate {
     }
 
     @Test
-    public void testDebug() {
-        for (int i = 0; i < 100; i++) {
-            System.out.println("you got " + i);
-        }
-    }
-
-    @Test
-    public void testDebug2() {
-        int i = 99;
-        method1(i);
-    }
-
-    private void method1(int i) {
-        System.out.println("i:" + i);
-        method2(i);
-    }
-
-    private void method2(int j) {
-        j++;
-        System.out.println("j:" + j);
-    }
-
-    @Test
-    public void multiThreadTest() {
-        new Thread(() -> {
-            System.out.println("1.白日依山尽");
-        }, "ThreadOne").start();
-        new Thread(() -> {
-            System.out.println("2.黄河入海流");
-        }, "ThreadTwo").start();
-        System.out.println("3.欲穷千里目");
-        System.out.println("4.更上一层楼");
-    }
-
-//    @Autowired
-//    private Hello hello;
-
-    @Test
     public void testConfiguration() {
         AnnotationConfigApplicationContext annotationContext = new AnnotationConfigApplicationContext(Hello.class);
 //        Hello hello = annotationContext.getBean("testHello1", Hello.class);// 创建bean的引用对象
