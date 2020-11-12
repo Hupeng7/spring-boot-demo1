@@ -2,14 +2,11 @@ package com.example.springbootdemomytool.utils.multitaskdemo;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
 
 /**
  * @ClassName MultiTaskDemo
- * @Description
+ * @Description 多任务
  * @Author Leo
  * @Date 2020/5/14 18:13
  * @Version 1.0
