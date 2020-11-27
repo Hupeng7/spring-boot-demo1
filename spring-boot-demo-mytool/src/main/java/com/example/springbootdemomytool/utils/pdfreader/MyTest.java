@@ -22,9 +22,9 @@ import java.util.List;
 public class MyTest {
     public static void main(String[] args) throws IOException {
         //1.给定文件
-        String fileRootName = "D://work//doc//doc-old//hzph//文档//需求//电子签章//e签宝//洋钱罐盛天合同汇总/";
+        String fileRootName = "D://project//wukongSDK_java//pdf/";
         //String fileName = "洋钱罐-恒普确认函.pdf";
-        String fileName = "洋钱罐服务协议.pdf";
+        String fileName = "梁华贤_恒普融担协议-众邦-2020.9.7-众邦审阅版.pdf";
         String fileDir = fileRootName + fileName;
         File pdfFile = new File(fileDir);
         //2.定义一个byte数组，长度为文件的长度
@@ -48,7 +48,7 @@ public class MyTest {
 
         //4.指定关键字
         //String keyword = "额贷款有限责任公司";
-        String keyword = "全兴";
+        String keyword = "甲方（签字）";
 
         //5.调用方法，给定关键字和文件
         List<float[]> positions = findKeywordPostions(pdfData, keyword);

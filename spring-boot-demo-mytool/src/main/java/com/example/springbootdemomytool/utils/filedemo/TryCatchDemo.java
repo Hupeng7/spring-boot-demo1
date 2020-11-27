@@ -52,4 +52,108 @@ public class TryCatchDemo {
             e.printStackTrace();
         }
     }
+
+    // Java byte[]方式读写文件 JDK1.6之前
+
+    /**
+     * 以byte[] 方式读取文件
+     *
+     * @param fileName 文件名
+     * @return
+     * @throws IOException
+     */
+    public static byte[] readFileByBytes(String fileName) throws IOException {
+        InputStream in = null;
+        ByteArrayOutputStream out = null;
+        try {
+            in = new BufferedInputStream(new FileInputStream(fileName));
+            out = new ByteArrayOutputStream();
+            byte[] tempBytes = new byte[in.available()];
+            for (int i = 0; (i = in.read(tempBytes)) != -1; ) {
+                out.write(tempBytes, 0, i);
+            }
+        } finally {
+            if (in != null) {
+                in.close();
+            }
+        }
+        return out.toByteArray();
+    }
+
+    /**
+     * 向文件写入byte[]
+     *
+     * @param fileName 文件名
+     * @param bytes    字节
+     * @param append   是否追加
+     * @throws IOException
+     */
+    public static void writeFileByBytes(String fileName, byte[] bytes, boolean append) throws IOException {
+        OutputStream out = null;
+        try {
+            out = new BufferedOutputStream(new FileOutputStream(fileName, append));
+            out.write(bytes);
+        } finally {
+            if (out != null) {
+                out.close();
+            }
+        }
+    }
+
+    /**
+     * 从文件开头向文件写入byte[]
+     *
+     * @param fileName 文件名
+     * @param bytes    字节
+     * @throws IOException
+     */
+    public static void writeFileByBytes(String fileName, byte[] bytes) throws IOException {
+        writeFileByBytes(fileName, bytes, false);
+    }
+
+    // JDK1.7以后实现
+
+    /**
+     * 以byte[] 方式读取文件
+     *
+     * @param fileName 文件名
+     * @return
+     * @throws IOException
+     */
+    public static byte[] readFileByBytes7(String fileName) throws IOException {
+        try (InputStream in = new BufferedInputStream(new FileInputStream(fileName));
+             ByteArrayOutputStream out = new ByteArrayOutputStream();) {
+            byte[] tempBytes = new byte[in.available()];
+            for (int i = 0; (i = in.read(tempBytes)) != -1; ) {
+                out.write(tempBytes, 0, i);
+            }
+            return out.toByteArray();
+        }
+    }
+
+    /**
+     * 向文件写入byte[]
+     *
+     * @param fileName 文件名
+     * @param bytes    字节内容
+     * @param append   是否追加
+     * @throws IOException
+     */
+    public static void writeFileByBytes7(String fileName, byte[] bytes, boolean append) throws IOException {
+        try (OutputStream out = new BufferedOutputStream(new FileOutputStream(fileName, append))) {
+            out.write(bytes);
+        }
+    }
+
+    /**
+     * 从文件开头向文件写入byte[]
+     *
+     * @param fileName 文件名
+     * @param bytes    字节内容
+     * @throws IOException
+     */
+    public static void writeFileByBytes7(String fileName, byte[] bytes) throws IOException {
+        writeFileByBytes7(fileName, bytes, false);
+    }
+
 }
