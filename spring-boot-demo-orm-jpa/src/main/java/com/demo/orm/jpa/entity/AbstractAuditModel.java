@@ -1,4 +1,4 @@
-package com.demo.orm.jpa.entity.base;
+package com.demo.orm.jpa.entity;
 
 import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;

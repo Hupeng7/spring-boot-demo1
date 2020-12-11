@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>base64转换工具</title>
+    <style type="text/css">
+        #origin-text {
+            height: 200px;
+            width: 60%;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+
+        #base64-text {
+            height: 200px;
+            width: 60%;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+
+        #encode-base64 {
+            height: 30px;
+            width: 10%;
+            float: left;
+            margin-left: 30%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #decode-base64 {
+            height: 30px;
+            width: 10%;
+            float: right;
+            margin-right: 30%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+    <script>
+        function encodeBase64() {
+            var a = document.getElementById("origin-text");
+            var b = document.getElementById("base64-text");
+            b.value = window.btoa(a.value);
+        };
+
+        function decodeBase64() {
+            var a = document.getElementById("origin-text");
+            var b = document.getElementById("base64-text");
+            a.value = window.atob(b.value);
+        }
+    </script>
+</head>
+<body>
+<textarea id="origin-text" placeholder="原字符串"></textarea>
+<div style="margin: 0">
+    <button id="encode-base64" onclick="encodeBase64()">⏬ 转base64</button>
+    <button id="decode-base64" onclick="decodeBase64()">⏫️ 解析base64</button>
+</div>
+<textarea id="base64-text" placeholder="base64字符串"></textarea>
+</body>
+</html>

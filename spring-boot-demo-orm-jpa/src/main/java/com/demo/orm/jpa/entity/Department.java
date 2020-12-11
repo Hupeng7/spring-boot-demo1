@@ -1,6 +1,5 @@
 package com.demo.orm.jpa.entity;
 
-import com.demo.orm.jpa.entity.base.AbstractAuditModel;
 import lombok.*;
 
 import javax.persistence.*;

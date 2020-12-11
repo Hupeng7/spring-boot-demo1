@@ -1,8 +1,6 @@
 package com.example.springbootdemomytool.utils.timeutils;
 
-import netscape.security.UserTarget;
 import org.junit.Test;
-import org.omg.SendingContext.RunTime;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

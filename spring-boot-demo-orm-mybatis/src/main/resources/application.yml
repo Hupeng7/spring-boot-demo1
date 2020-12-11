@@ -20,14 +20,24 @@ spring:
       pool-name: SpringBootDemoHikariCP
       max-lifetime: 60000
       connection-timeout: 30000
+    jpa:
+      generateDdl: false
+      hibernate:
+        ddlAuto: update
+      openInView: true
+      show-sql: true
+
+
 logging:
   level:
     com.demo: debug
-    com.demoorm.mybatis.mapper: trace
+    com.demoorm.mybatis.mapper: debug
 mybatis:
   configuration:
     # 下划线转驼峰
     map-underscore-to-camel-case: true
+    # 开启sql日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   mapper-locations: classpath:mappers/*.xml
   type-aliases-package: com.demo.orm.mybatis.entity
 # 为 jasypt 配置解密秘钥
