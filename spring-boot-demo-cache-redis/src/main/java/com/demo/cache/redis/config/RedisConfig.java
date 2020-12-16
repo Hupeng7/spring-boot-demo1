@@ -19,7 +19,7 @@ import java.io.Serializable;
 
 /**
  * @ClassName RedisConfig
- * @Description TODO
+ * @Description
  * @Author Leo
  * @Date 2020/1/2 17:02
  * @Version 1.0

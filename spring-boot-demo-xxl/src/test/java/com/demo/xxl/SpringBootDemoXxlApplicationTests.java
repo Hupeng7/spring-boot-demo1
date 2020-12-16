@@ -1,10 +1,10 @@
-package com.demo.springbootdemoeasyexcel;
+package com.demo.xxl;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-public class SpringBootDemoEasyexcelApplicationTests {
+public class SpringBootDemoXxlApplicationTests {
 
     @Test
     public void contextLoads() {

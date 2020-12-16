@@ -46,6 +46,7 @@
         <module>spring-boot-common</module>
         <module>spring-boot-demo-statemachine</module>
         <module>spring-boot-demo-guava</module>
+        <module>spring-boot-demo-xxl</module>
     </modules>
 
     <packaging>pom</packaging>
