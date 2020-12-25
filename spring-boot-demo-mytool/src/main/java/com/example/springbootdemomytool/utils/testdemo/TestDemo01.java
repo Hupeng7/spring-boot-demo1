@@ -1,5 +1,7 @@
 package com.example.springbootdemomytool.utils.testdemo;
 
+import java.util.Random;
+
 /**
  * @ClassName TestDemo01
  * @Description
@@ -11,9 +13,25 @@ package com.example.springbootdemomytool.utils.testdemo;
 public class TestDemo01 {
     public static void main(String[] args) {
         int i = 10_0000;
-        System.out.println(i);
+        //System.out.println(i);
 
         float f = 1.00__30_2F;
-        System.out.println(f);
+        //System.out.println(f);
+        System.out.println("random is : "+getRandom());
+    }
+
+    /**
+     * 随机数
+     *
+     * @return
+     */
+    public static String getRandom() {
+        StringBuffer sb = new StringBuffer();
+        Random random = new Random();
+        for (int i = 0; i < 16; i++) {
+            sb.append("1234567890qwertyuiopasdfghjklzxcvbnm"
+                    .charAt(random.nextInt("1234567890qwertyuiopasdfghjklzxcvbnm".length())));
+        }
+        return sb.toString();
     }
 }
