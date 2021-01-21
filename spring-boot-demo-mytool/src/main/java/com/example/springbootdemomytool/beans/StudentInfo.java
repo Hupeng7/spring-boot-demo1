@@ -1,5 +1,6 @@
 package com.example.springbootdemomytool.beans;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -22,6 +23,8 @@ public class StudentInfo implements Comparable<StudentInfo> {
     private Double height;
 
     private LocalDate birthday;
+
+    private BigDecimal money;
 
     @Override
     public int compareTo(StudentInfo o) {
@@ -92,5 +95,13 @@ public class StudentInfo implements Comparable<StudentInfo> {
 
     public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
+    }
+
+    public BigDecimal getMoney() {
+        return money;
+    }
+
+    public void setMoney(BigDecimal money) {
+        this.money = money;
     }
 }

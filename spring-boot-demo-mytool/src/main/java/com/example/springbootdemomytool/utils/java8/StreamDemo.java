@@ -2,6 +2,7 @@ package com.example.springbootdemomytool.utils.java8;
 
 import com.example.springbootdemomytool.beans.StudentInfo;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -110,6 +111,17 @@ public class StreamDemo {
         for (Integer key : collect.keySet()) {
             System.out.println(key + "= " + collect.get(key));
         }
+
+        // 求和 BigDecimal
+        BigDecimal result2 = studentInfoList.stream().map(StudentInfo::getMoney).reduce(BigDecimal.ZERO,BigDecimal::add);
+        BigDecimal result3 = studentInfoList.stream().map(i -> {
+            if (i.getMoney()==null){
+                return BigDecimal.ZERO;
+            }else {
+                return i.getMoney();
+            }
+        }).reduce(BigDecimal.ZERO,BigDecimal::add);
+
     }
 
     private static void test3(List<StudentInfo> studentInfoList) {
