@@ -28,26 +28,6 @@
             <artifactId>hutool-all</artifactId>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/com.alibaba/easyexcel -->
-        <dependency>
-            　　<groupId>com.alibaba</groupId>
-            　　<artifactId>easyexcel</artifactId>
-            　　<version>2.1.1</version>
-        </dependency>
-
-        <!--xls-->
-        <dependency>
-            　　<groupId>org.apache.poi</groupId>
-            　　<artifactId>poi</artifactId>
-            　　<version>3.17</version>
-        </dependency>
-
-        <dependency>
-            　　<groupId>org.apache.poi</groupId>
-            　　<artifactId>poi-ooxml</artifactId>
-            　　<version>3.17</version>
-        </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -58,6 +38,7 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -69,12 +50,33 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>RELEASE</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.alibaba/easyexcel -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>easyexcel</artifactId>
+            <version>2.2.4</version>
+        </dependency>
+
+        <!--xls-->
+<!--        <dependency>-->
+<!--            　　<groupId>org.apache.poi</groupId>-->
+<!--            　　<artifactId>poi</artifactId>-->
+<!--            　　<version>3.17</version>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            　　<groupId>org.apache.poi</groupId>-->
+<!--            　　<artifactId>poi-ooxml</artifactId>-->
+<!--            　　<version>3.17</version>-->
+<!--        </dependency>-->
     </dependencies>
 
     <build>

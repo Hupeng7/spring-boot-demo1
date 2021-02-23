@@ -62,6 +62,9 @@
         <option value="$PROJECT_DIR$/spring-boot-helloworld-01/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-demo-easyexcel/pom.xml" />
         <option value="$PROJECT_DIR$/design-patterns/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-demo-xxl/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-demo-rabbitmq/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-demo-noifelse/pom.xml" />
       </list>
     </option>
   </component>

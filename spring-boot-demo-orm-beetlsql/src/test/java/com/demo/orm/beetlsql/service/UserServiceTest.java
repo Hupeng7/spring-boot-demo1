@@ -33,8 +33,17 @@ public class UserServiceTest extends SpringBootDemoOrmBeetlsqlApplicationTests {
     @Test
     public void saveUser() {
         String salt = IdUtil.fastSimpleUUID();
-        User user = User.builder().name("testSave3").password(SecureUtil.md5("123456" + salt)).salt(salt).email("testSave3@qq.com").phoneNumber("13500000003")
-                .status(1).lastLoginTime(new DateTime()).createTime(new DateTime()).lastUpdateTime(new DateTime()).build();
+        User user = User.builder()
+                .name("testSave3")
+                .password(SecureUtil.md5("123456" + salt))
+                .salt(salt)
+                .email("testSave3@qq.com")
+                .phoneNumber("13500000003")
+                .status(1)
+                .lastLoginTime(new DateTime())
+                .createTime(new DateTime())
+                .lastUpdateTime(new DateTime())
+                .build();
         user = userService.saveUser(user);
         Assert.assertTrue(ObjectUtil.isNotNull(user.getId()));
         log.debug("【user】= {}", user);

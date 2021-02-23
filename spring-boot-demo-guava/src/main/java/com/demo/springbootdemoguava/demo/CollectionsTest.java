@@ -4,10 +4,7 @@ import com.google.common.collect.*;
 import com.google.common.primitives.Ints;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 /**
  * @ClassName CollectionsTest
@@ -88,6 +85,26 @@ public class CollectionsTest {
         log.info(Lists.reverse(lists).toString());
         // 指定初始化大小的list
         Lists.newArrayListWithCapacity(3);
+
+        // 快速完成到集合的转换
+        List<Integer> list = Ints.asList(1, 3, 5, 6, 9);
+        log.info(Ints.join(",", 1, 3, 1, 4));
+
+        // 原生类型数组快速合并
+        int[] newIntArray = Ints.concat(new int[]{1, 2}, new int[]{2, 3, 4});
+        log.info("new int array length: " + newIntArray.length);
+
+        // 最大、最小
+        log.info("max: " + Ints.max(newIntArray) + ", min: " + Ints.min(newIntArray));
+
+        // 是否包含
+        boolean contains = Ints.contains(newIntArray, 6);
+        log.info("contains: " + contains);
+
+        // 集合到数组的转换
+        int[] array = Ints.toArray(list);
+
+
     }
 
 
