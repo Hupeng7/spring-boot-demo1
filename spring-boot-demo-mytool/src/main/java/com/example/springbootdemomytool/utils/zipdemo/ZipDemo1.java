@@ -3,6 +3,7 @@ package com.example.springbootdemomytool.utils.zipdemo;
 import com.alibaba.fastjson.JSONObject;
 
 import java.io.*;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.zip.ZipFile;
 /**
  * @ClassName ZipDemo1
  * @Description 解压zip文件 并读取
+ * 重复读取，后面的文件会覆盖前面
  * @Author H
  * @Date 2021/3/3 14:42
  * @Version 1.0
@@ -24,8 +26,10 @@ public class ZipDemo1 {
             throw new Exception(srcFile.getPath() + "所指文件不存在");
         }
         String destDirPath = inputFile.replace(".zip", "");
-        //创建压缩文件对象
-        ZipFile zipFile = new ZipFile(srcFile);
+        //创建压缩文件对象 windows环境下，默认字符集为GBK，ZipFile默认使用UTF-8字符集，当文件名存在中文时，处理时就会报错
+        // https://blog.csdn.net/Asuran18/article/details/80403689
+        ZipFile zipFile = new ZipFile(srcFile, Charset.forName("GBK"));
+        // ZipFile zipFile = new ZipFile(srcFile);
         //开始解压
         Enumeration<?> entries = zipFile.entries();
         while (entries.hasMoreElements()) {
