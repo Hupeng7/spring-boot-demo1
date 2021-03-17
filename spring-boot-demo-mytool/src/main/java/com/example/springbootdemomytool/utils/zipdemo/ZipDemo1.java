@@ -96,7 +96,6 @@ public class ZipDemo1 {
     }
 
     /**
-     *
      * @param inputFilePathName
      */
     public static void zipUncompressAndReadFile1(String inputFilePathName) {
