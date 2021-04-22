@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.orm.mybatis.mapper.OrderMapper">
+    <insert id="saveOrder">
+      INSERT INTO `order` (`t0_due_principal`,
+                                        `t0_due_interest`,
+                                        `t0_due_fee3`,
+                                        `t30_paid_fee3`,
+                                        `update_by`)
+      VALUES (#{order.t0DuePrincipal},
+      #{order.t0DueInterest},
+      #{order.t0DueFee3},
+      #{order.t30PaidFee3},
+      #{order.updateBy})
+    </insert>
+
+
+    <update id="updateOrder">
+        UPDATE `order` set
+            `t30_paid_fee3`=#{order.t30PaidFee3},
+            `update_by`=#{order.updateBy}
+        WHERE id=#{order.id}
+    </update>
+
+    <delete id="deleteById">
+        DELETE
+        FROM `order`
+        WHERE `id` = #{id}
+    </delete>
+
+    <!-- 批量更新第一种方法，通过接收传进来的参数list进行循环着组装sql -->
+    <update id="batchUpdate" parameterType="java.util.List">
+        <foreach collection="orders" item="item" index="index" open="" close="" separator=";">
+            update `fund_zbank`.`order`
+            <set>
+                <!--                <if test="item.t30PaidFee3 != null">-->
+                <!--                    t30_paid_fee3 = #{item.t30PaidFee3,jdbcType=DECIMAL},-->
+                <!--                </if>-->
+                <if test="item.updateBy != null">
+                    update_by = #{item.updateBy,jdbcType=VARCHAR},
+                </if>
+            </set>
+            where id = #{item.id,jdbcType=INTEGER}
+        </foreach>
+    </update>
+
+    <!-- 批量更新第二种方法，通过 case when语句变相的进行批量更新 -->
+    <update id="batchUpdate1" parameterType="java.util.List">
+        update `fund_zbank`.`order`
+        <trim prefix="set" suffixOverrides=",">
+            <trim prefix="update_by = case" suffix="end,">
+                <foreach collection="orders" item="i" index="index">
+                    <if test="i.updateBy != null">
+                        when id=#{i.id} then #{i.updateBy}
+                    </if>
+                </foreach>
+            </trim>
+
+        </trim>
+        where
+        <foreach collection="orders" separator="or" item="i" index="index">
+            id=#{i.id}
+        </foreach>
+    </update>
+
+
+</mapper>
