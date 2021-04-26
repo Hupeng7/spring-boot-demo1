@@ -47,6 +47,7 @@
         <module>spring-boot-demo-statemachine</module>
         <module>spring-boot-demo-guava</module>
         <module>spring-boot-demo-xxl</module>
+        <module>spring-boot-demo-mybatis</module>
     </modules>
 
     <packaging>pom</packaging>

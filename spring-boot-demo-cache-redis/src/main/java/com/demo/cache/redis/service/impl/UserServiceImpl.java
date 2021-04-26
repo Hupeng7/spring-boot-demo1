@@ -31,9 +31,9 @@ public class UserServiceImpl implements UserService {
      * 初始化数据
      */
     static {
-        DATABASES.put(1L, new User(1L, "user1"));
-        DATABASES.put(2L, new User(2L, "user2"));
-        DATABASES.put(3L, new User(3L, "user3"));
+        DATABASES.put(1L, new User(1L, "user111111"));
+        DATABASES.put(2L, new User(2L, "user222222"));
+        DATABASES.put(3L, new User(3L, "user333333"));
     }
 
     /**

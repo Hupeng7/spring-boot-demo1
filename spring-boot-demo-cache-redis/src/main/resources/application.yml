@@ -22,3 +22,9 @@ spring:
 logging:
   level:
     com.demo: debug
+
+## 端口号
+server:
+  port: 9098
+  servlet:
+    context-path: /api

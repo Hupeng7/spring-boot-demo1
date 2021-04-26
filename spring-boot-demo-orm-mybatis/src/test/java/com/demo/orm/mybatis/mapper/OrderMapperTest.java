@@ -54,7 +54,7 @@ public class OrderMapperTest extends SpringBootDemoOrmMybatisApplicationTests {
     }
 
     /**
-     * 批量更新
+     * 批量更新数据
      */
     @Test
     public void batchUpdate() {
