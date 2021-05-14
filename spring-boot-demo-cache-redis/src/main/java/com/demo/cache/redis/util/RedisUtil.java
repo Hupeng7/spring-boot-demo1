@@ -3,7 +3,9 @@ package com.demo.cache.redis.util;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.DefaultTypedTuple;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.ZSetOperations;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
@@ -578,6 +580,51 @@ public class RedisUtil {
             e.printStackTrace();
             return false;
         }
+    }
+
+    public boolean zaddAll(String key, List<ZSetOperations.TypedTuple<?>> tupleList, Long timeout, TimeUnit unit) {
+        if (tupleList == null || tupleList.isEmpty()) {
+            return false;
+        }
+        Set<ZSetOperations.TypedTuple<Object>> tupleSet = toTupleSet(tupleList);
+        redisTemplate.opsForZSet().add(key, tupleSet);
+        if (timeout != null) {
+            redisTemplate.expire(key, timeout, unit);
+        }
+        return true;
+    }
+
+    private static Set<ZSetOperations.TypedTuple<Object>> toTupleSet(List<ZSetOperations.TypedTuple<?>> tupleList) {
+        LinkedHashSet<ZSetOperations.TypedTuple<Object>> tupleSet = new LinkedHashSet<>();
+        for (ZSetOperations.TypedTuple<?> t : tupleList) {
+            tupleSet.add(new DefaultTypedTuple<Object>(toJson(t.getValue()), t.getScore()));
+        }
+        return tupleSet;
+    }
+
+    public boolean zrem(String key, Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        redisTemplate.opsForZSet().remove(key, toJson(obj));
+        return true;
+    }
+
+    public boolean unionStore(String destKey, Collection<String> keys, Long timeout, TimeUnit unit) {
+        if (keys == null || keys.isEmpty()) {
+            return false;
+        }
+        Object[] keyArr = keys.toArray();
+        String key = (String) keyArr[0];
+        Collection<String> otherKeys = new ArrayList<>(keys.size() - 1);
+        for (int i = 1; i < keyArr.length; i++) {
+            otherKeys.add((String) keyArr[i]);
+        }
+        redisTemplate.opsForZSet().unionAndStore(key, otherKeys, destKey);
+        if (timeout != null) {
+            redisTemplate.expire(destKey, timeout, unit);
+        }
+        return true;
     }
 
     // 有问题

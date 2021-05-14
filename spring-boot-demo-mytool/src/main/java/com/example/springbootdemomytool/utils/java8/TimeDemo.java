@@ -6,7 +6,15 @@ import java.time.temporal.ChronoUnit;
 
 /**
  * @ClassName TimeDemo
- * @Description url: https://mp.weixin.qq.com/s/USyFqFKKssmzSN1xd3jPhg
+ * @Description
+ *  url: https://mp.weixin.qq.com/s/USyFqFKKssmzSN1xd3jPhg
+ * 总结：
+ * Java 8日期时间API的重点
+ * 1）提供了javax.time.ZoneId 获取时区。
+ * 2）提供了LocalDate和LocalTime类。
+ * 3）Java 8 的所有日期和时间API都是不可变类并且线程安全，而现有的Date和Calendar API中的java.util.Date和SimpleDateFormat是非线程安全的。
+ * 4）主包是 java.time,包含了表示日期、时间、时间间隔的一些类。里面有两个子包java.time.format用于格式化， java.time.temporal用于更底层的操作。
+ * 5）时区代表了地球上某个区域内普遍使用的标准时间
  * @Author H
  * @Date 2021/1/11 15:36
  * @Version 1.0
@@ -89,7 +97,7 @@ public class TimeDemo {
         System.out.println("获取当前的时间，不含有日期： " + time);
     }
 
-    // 示例7:Java 8中获取当前时间
+    // 示例7:Java 8中 现有时间上增加小时
     public static void time1() {
         LocalTime time = LocalTime.now();
         LocalTime newTime = time.plusHours(3);
@@ -185,6 +193,14 @@ public class TimeDemo {
                 + periodToNextJavaRelease.getMonths()
                 + ", years: " + periodToNextJavaRelease.getYears()
                 + ", days: " + periodToNextJavaRelease.getDays());
+    }
+
+    // 包含时差信息的日期和时间
+    public void ZoneOffset() {
+        LocalDateTime dateTime = LocalDateTime.of(2018, Month.FEBRUARY, 14, 19, 20);
+        ZoneOffset zoneOffset = ZoneOffset.of("+05:30");
+        OffsetDateTime date = OffsetDateTime.of(dateTime, zoneOffset);
+        System.out.println("Date and Time with timezone offset in Java : " + date);
     }
 
     // 示例16:在Java 8中获取当前的时间戳
