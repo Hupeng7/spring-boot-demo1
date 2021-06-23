@@ -1,6 +1,5 @@
 package com.demo.websocket.model;
 
-import cn.hutool.core.util.NumberUtil;
 import com.demo.websocket.model.server.*;
 import com.demo.websocket.util.IpUtil;
 import oshi.SystemInfo;
@@ -190,7 +189,7 @@ public class Server {
             sysFile.setTotal(convertFileSize(total));
             sysFile.setFree(convertFileSize(free));
             sysFile.setUsed(convertFileSize(used));
-            sysFile.setUsage(NumberUtil.mul(NumberUtil.div(used, total, 4), 100));
+           // sysFile.setUsage(NumberUtil.mul(NumberUtil.div(used, total, 4), 100));
             sysFiles.add(sysFile);
         }
     }

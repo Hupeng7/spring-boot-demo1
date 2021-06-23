@@ -45,7 +45,7 @@ public class XxlJobConfiguration {
 
     @Bean
     public XxlJobSpringExecutor xxlJobSpringExecutor() {
-        logger.info(">>>>>>>>>>> xxl-job config init.");
+        logger.info("###--------------->>> xxl-job config init.");
         // registry jobhandler
         XxlJobSpringExecutor.registJobHandler("beanClassJobHandler", new BeanClassJobHandler());
         XxlJobSpringExecutor xxlJobSpringExecutor = new XxlJobSpringExecutor();

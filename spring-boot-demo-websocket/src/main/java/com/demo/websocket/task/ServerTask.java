@@ -28,7 +28,7 @@ public class ServerTask {
     @Autowired
     private SimpMessagingTemplate simpMessagingTemplate;
 
-    @Scheduled(cron = "* * * * * ?")
+    @Scheduled(cron = "10 * * * * ?")
     public void websocket() throws Exception {
         log.info("【推送消息】开始执行：{}", DateUtil.formatDateTime(new Date()));
         Server server = new Server();

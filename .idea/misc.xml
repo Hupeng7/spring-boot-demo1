@@ -65,6 +65,10 @@
         <option value="$PROJECT_DIR$/spring-boot-demo-xxl/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-demo-rabbitmq/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-demo-noifelse/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-demo-algorithm/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-demo-web/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-demo-mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/elastic-search-demo/pom.xml" />
       </list>
     </option>
   </component>

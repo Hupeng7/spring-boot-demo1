@@ -6,8 +6,7 @@ import java.time.temporal.ChronoUnit;
 
 /**
  * @ClassName TimeDemo
- * @Description
- *  url: https://mp.weixin.qq.com/s/USyFqFKKssmzSN1xd3jPhg
+ * @Description url: https://mp.weixin.qq.com/s/USyFqFKKssmzSN1xd3jPhg
  * 总结：
  * Java 8日期时间API的重点
  * 1）提供了javax.time.ZoneId 获取时区。
@@ -136,9 +135,11 @@ public class TimeDemo {
 
     // 示例10:Java 8的Clock时钟类
     public static void time4() {
+        // 根据系统时间返回当前时间并设置为UTC
         Clock clock = Clock.systemUTC();
         System.out.println("Clock: " + clock.millis());
 
+        // 根据系统时钟区域返回时间
         Clock defaultClock = Clock.systemDefaultZone();
         System.out.println("Clock: " + defaultClock.millis());
     }

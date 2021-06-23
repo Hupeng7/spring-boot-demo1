@@ -1,5 +1,12 @@
 package com.example.springbootdemomytool.utils.testdemo;
 
+import org.apache.poi.ss.formula.functions.T;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
 /**
  * @ClassName TestDemo4
  * @Description
@@ -34,14 +41,30 @@ public class TestDemo4 {
 //        for (int i = 0; i < split2.length; i++) {
 //            System.out.println(i+":"+split2[i]);
 //        }
-        
+
         String sp = "boo:aoo:foo";
         String[] sp1 = sp.split(":", 4);
         for (int i = 0; i < 3; i++) {
-            
+
         }
 
+        Map<String, String> map = new HashMap<>();
+        map.put("1", "111");
+        map.put("2", "222");
+        map.put("3", "333");
+        Set<Map.Entry<String, String>> entries = map.entrySet();
+        for (Map.Entry<String, String> entry : entries) {
+            String key = entry.getKey();
+            String value = entry.getValue();
+            System.out.println(key + ":" + value);
+        }
 
+    }
+
+    private static void testAdd(List<T> list) {
+        // list.add("hello");
+        // list.add(null);
+        T t = list.get(0);
     }
 
 }
