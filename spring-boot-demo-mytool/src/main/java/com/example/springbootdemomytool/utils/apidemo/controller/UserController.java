@@ -28,10 +28,10 @@ import javax.validation.Valid;
 @RequestMapping("/user")
 @Slf4j
 public class UserController {
+    private final static Gson GSON = new Gson();
+
     @Autowired
     private UserService userService;
-
-    private final static Gson GSON = new Gson();
 
     @PostMapping("/addUser")
     public String addUser(@RequestBody @Valid User user) {

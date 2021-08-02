@@ -13,7 +13,7 @@ import java.util.concurrent.Future;
  * @Version 1.0
  */
 public class TaskAsyncHandler {
-    public static Future<Boolean> saveCouponListAsync(String taskName, List<String> list) throws Exception {
+    public static Future<Boolean> saveCouponListAsync(String taskName, List<String> list) {
         if ("task3".equalsIgnoreCase(taskName)) {
             System.out.println("错误的task：" + taskName);
             //throw new Exception("exception");

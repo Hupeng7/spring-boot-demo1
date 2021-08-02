@@ -23,6 +23,9 @@ public class SpringBootDemoMybatisApplicationTests {
         BigDecimal bigDecimal2 = new BigDecimal(10);
         Order order = Order.builder().t0DuePrincipal(bigDecimal1).t30PaidFee3(bigDecimal2).build();
 
+//        ManagedTransactionFactory
+//        ManagedTransaction
+//        JdbcTransaction
 
     }
 

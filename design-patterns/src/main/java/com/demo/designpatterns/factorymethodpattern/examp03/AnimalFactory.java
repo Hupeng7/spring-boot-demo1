@@ -13,4 +13,8 @@ public interface AnimalFactory {
 
     Animal createCat();
 
+    static void hello(String message){
+        System.out.println("hello,interface static method,"+message);
+    }
+
 }
