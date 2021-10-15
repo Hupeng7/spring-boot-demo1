@@ -46,8 +46,8 @@ public class SpringBootDemoEncryptionanddecryptionApplicationTests {
         EnvironmentPBEConfig config = new EnvironmentPBEConfig();
         // 加密的算法，默认
         config.setAlgorithm("PBEWithMD5AndDES");
-        //config.setPassword("mypassword");
         // 加密的 salt
+        //config.setPassword("mypassword");
         config.setPassword("35579B7F9C8CB15E");
         standardPBEStringEncryptor.setConfig(config);
         //String encryptedText = "OiQ/EYfNkGf+UyV13smf/g==";

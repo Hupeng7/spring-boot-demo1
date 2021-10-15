@@ -70,7 +70,6 @@ public class EncryptHandler {
 
     private void encrypt(ProceedingJoinPoint proceedingJoinPoint) {
         try {
-
             Object[] objects = proceedingJoinPoint.getArgs();
             if (objects.length == 0) {
                 return;

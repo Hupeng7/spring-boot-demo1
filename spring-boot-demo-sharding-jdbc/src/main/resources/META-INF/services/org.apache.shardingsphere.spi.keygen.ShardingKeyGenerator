@@ -1,0 +1,2 @@
+com.demo.sharding.jdbc.key.MyShardingKeyGenerator
+com.demo.sharding.jdbc.key.TinyIdShardingKeyGenerator

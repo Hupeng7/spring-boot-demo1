@@ -47,6 +47,7 @@
     <file url="file://$PROJECT_DIR$/spring-boot-demo-email/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-demo-email/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-demo-email/src/main/resources/application.yml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-demo-encryptionanddecryption/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-demo-exception-handler" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-demo-exception-handler/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-demo-exception-handler/src/main/resources" charset="UTF-8" />
@@ -104,6 +105,7 @@
     <file url="file://$PROJECT_DIR$/spring-boot-demo-orm-mybatis/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-demo-orm-mybatis/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-demo-orm-mybatis/src/main/resources/application.yml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-demo-orm-postgresql/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-demo-properties" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-demo-properties/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-demo-properties/src/main/resources" charset="UTF-8" />
@@ -153,6 +155,7 @@
     <file url="file://$PROJECT_DIR$/spring-boot-demo-xxl/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-demo-xxl/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-helloworld-01/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-test/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-contract-demo/src/main/java" charset="UTF-8" />
   </component>
 </project>

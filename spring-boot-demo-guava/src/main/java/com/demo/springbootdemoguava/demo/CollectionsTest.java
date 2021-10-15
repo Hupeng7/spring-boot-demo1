@@ -71,7 +71,6 @@ public class CollectionsTest {
         log.info("intersection : " + Sets.intersection(a, b));
         log.info("difference : " + Sets.difference(a, b));
         log.info("symmetricDifference : " + Sets.symmetricDifference(a, b));
-
     }
 
     private static void lists() {
@@ -103,8 +102,6 @@ public class CollectionsTest {
 
         // 集合到数组的转换
         int[] array = Ints.toArray(list);
-
-
     }
 
 

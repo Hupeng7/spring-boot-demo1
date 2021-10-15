@@ -45,7 +45,8 @@ public class RateLimiterAspect {
             }
             log.debug("【{}】的qps设置为：{}", method.getName(), RATE_LIMITER_CACHE.get(method.getName()).getRate());
 
-            if (RATE_LIMITER_CACHE.get(method.getName()) != null && !RATE_LIMITER_CACHE.get(method.getName()).tryAcquire(rateLimiter.timeout(), rateLimiter.timeUnit())) {
+            if (RATE_LIMITER_CACHE.get(method.getName()) != null
+                    && !RATE_LIMITER_CACHE.get(method.getName()).tryAcquire(rateLimiter.timeout(), rateLimiter.timeUnit())) {
                 throw new RuntimeException("手速太快了，慢点儿吧~");
             }
         }
