@@ -14,7 +14,6 @@ public class Test01 {
         String i = -1 % 2 == 1 ? "奇数" : "偶数";
         System.out.println(i);
 
-
         String ii = -1 % 2 == 0 ? "偶数" : "奇数";
         System.out.println(ii);
 
