@@ -52,5 +52,4 @@ public class ThreadLocalDemo {
         new Thread(new ThreadB(threadLocal)).start();
     }
 
-
 }
