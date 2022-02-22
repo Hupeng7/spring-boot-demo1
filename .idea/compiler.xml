@@ -36,6 +36,7 @@
         <module name="spring-boot-demo-swagger" />
         <module name="spring-boot-demo-log-aop" />
         <module name="spring-boot-common" />
+        <module name="spring-boot-demo-secondskill" />
         <module name="spring-boot-demo-orm-jpa" />
         <module name="spring-boot-demo-task" />
         <module name="spring-boot-demo-encryptionanddecryption" />
@@ -91,6 +92,7 @@
       <module name="spring-boot-demo-noifelse" options="-parameters" />
       <module name="spring-boot-demo-orm-postgresql" options="-parameters" />
       <module name="spring-boot-demo-rabbitmq" options="-parameters" />
+      <module name="spring-boot-demo-secondskill" options="" />
       <module name="spring-boot-demo-statemachine" options="" />
       <module name="spring-boot-demo-web" options="-parameters" />
       <module name="spring-boot-demo-xxl" options="-parameters" />
