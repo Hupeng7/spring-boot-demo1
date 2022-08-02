@@ -35,7 +35,7 @@ public class JedisCom {
             }
             return jedis.set(key, val, "NX", "PX", 1000 * 60).equalsIgnoreCase("ok");
         } catch (Exception e) {
-            log.info("setnx error,",e);
+           // log.info("setnx error,",e);
         } finally {
             if (jedis != null) {
                 jedis.close();
@@ -62,7 +62,7 @@ public class JedisCom {
                     append(" end");
             return Integer.valueOf(jedis.eval(sbScript.toString()).toString());
         } catch (Exception e) {
-            log.info("delnx error,",e);
+           // log.info("delnx error,",e);
         } finally {
             if (jedis != null) {
                 jedis.close();

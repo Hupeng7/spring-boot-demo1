@@ -1,5 +1,8 @@
 package com.example.springbootdemomytool.utils.testdemo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @ClassName TestDemo8
  * @Description
@@ -9,7 +12,7 @@ package com.example.springbootdemomytool.utils.testdemo;
  */
 public class TestDemo8 {
     public static void main(String[] args) {
-        replace();
+        //replace();
     }
 
     public static void replace() {
@@ -19,4 +22,8 @@ public class TestDemo8 {
         String result = date1.replaceAll("\\/", "");
         System.out.println("result: " + result);
     }
+
+
+
+
 }

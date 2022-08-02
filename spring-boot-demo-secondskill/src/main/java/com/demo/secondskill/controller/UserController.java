@@ -51,6 +51,7 @@ public class UserController {
 
     /**
      * 秒杀抢单业务逻辑
+     *
      * @return
      */
     @GetMapping("/qiangdan")
@@ -60,13 +61,17 @@ public class UserController {
 
         // 构造用户
         List<String> users = new ArrayList<>();
-        IntStream.range(0, 1000).parallel().forEach(b -> {
-            users.add("用户-" + b);
-        });
+//        IntStream.range(0, 1000).parallel().forEach(b -> {
+//            users.add("用户-" + b);
+//        });
+        for (int i = 0; i < 100000; i++) {
+            users.add("用户-" + i);
+        }
 
         // 初始化库存
-        nKuCuen = 10;
+        nKuCuen = 5;
 
+        Long startTime = System.currentTimeMillis();
         // 模拟开抢
         users.parallelStream().forEach(b -> {
             String shopUser = qiang(b);
@@ -74,7 +79,7 @@ public class UserController {
                 shopUsers.add(shopUser);
             }
         });
-
+        log.info("总耗时：{}", (System.currentTimeMillis() - startTime));
         return shopUsers;
     }
 
@@ -90,6 +95,13 @@ public class UserController {
             }
 
             if (jedisCom.setnx(shangpinKey, b)) {
+                // 模拟生成订单耗时操作，方便查看： 客户 多次获取锁记录
+//                try {
+//                    TimeUnit.SECONDS.sleep(2);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+
                 // 用户b拿到锁
                 log.info("用户{}拿到锁--->", b);
                 try {
@@ -119,7 +131,7 @@ public class UserController {
                 }
             } else {
                 // 用户b没拿到锁，在超时范围内继续请求锁，不需要处理
-                log.info("用户b没拿到锁");
+                log.info("用户{}没拿到锁", b);
             }
         }
 
