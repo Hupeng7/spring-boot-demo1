@@ -29,6 +29,7 @@
         <module name="spring-boot-demo-rabbitmq" />
         <module name="spring-boot-demo-statemachine" />
         <module name="spring-boot-demo-multi-datasource-jpa" />
+        <module name="spring-boot-demo-redis-token-limit" />
         <module name="spring-boot-demo-guava" />
         <module name="spring-boot-demo-ratelimit-redis" />
         <module name="spring-boot-demo-dynamic-datasource" />
@@ -92,6 +93,7 @@
       <module name="spring-boot-demo-noifelse" options="-parameters" />
       <module name="spring-boot-demo-orm-postgresql" options="-parameters" />
       <module name="spring-boot-demo-rabbitmq" options="-parameters" />
+      <module name="spring-boot-demo-redis-token-limit" options="-parameters" />
       <module name="spring-boot-demo-secondskill" options="" />
       <module name="spring-boot-demo-statemachine" options="" />
       <module name="spring-boot-demo-web" options="-parameters" />

@@ -21,7 +21,7 @@ public class Demo2 {
             sleep(1, TimeUnit.SECONDS);
 
             System.out.println("T1:烧开水...");
-            sleep(10, TimeUnit.SECONDS);
+            sleep(7, TimeUnit.SECONDS);
         });
 
         // 任务2：洗茶壶->洗茶杯->拿茶叶
