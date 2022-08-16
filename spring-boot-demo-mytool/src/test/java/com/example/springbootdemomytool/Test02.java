@@ -34,6 +34,7 @@ public class Test02 {
 
         double pow = Math.pow(4, 2);
         System.out.println(pow);
+
     }
 
     public static int getRandomScore(Integer x, Integer y, Integer z) {

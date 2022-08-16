@@ -2,6 +2,10 @@ package com.example.springbootdemomytool;
 
 import org.apache.commons.lang3.StringUtils;
 
+import java.math.BigInteger;
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @ClassName Test01
  * @Description
@@ -28,5 +32,19 @@ public class Test01 {
 //        s: 是是是
 //        s1: 是是是
 //        s2: $是$是
+
+        Map<String, Object> request_param = new HashMap<String, Object>();
+        request_param.put("request", "fasdfajk");
+
+        System.out.println(request_param.toString());
+
+        long l = Long.MAX_VALUE;
+        System.out.println(l);
+        System.out.println(l + 1L);
+
+        BigInteger bigInteger = new BigInteger("9223372036854775800");
+        BigInteger bigInteger1 = new BigInteger("100");
+        System.out.println(bigInteger.add(bigInteger1));
+
     }
 }

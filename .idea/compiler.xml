@@ -36,7 +36,9 @@
         <module name="spring-boot-demo-web" />
         <module name="spring-boot-demo-swagger" />
         <module name="spring-boot-demo-codegen" />
+        <module name="spring-boot-demo-algorithm" />
         <module name="spring-boot-common" />
+        <module name="spring-boot-demo-mq-kafka-provider" />
         <module name="spring-boot-demo-orm-jpa" />
         <module name="spring-boot-demo-task" />
         <module name="spring-boot-demo-encryptionanddecryption" />
@@ -59,15 +61,16 @@
         <module name="spring-boot-demo-sharding-jdbc" />
         <module name="spring-boot-demo-ldap" />
         <module name="spring-boot-demo-easyexcel" />
-        <module name="spring-boot-demo-orm-jdbctemplate" />
+        <module name="spring-boot-demo-mq-kafka" />
         <module name="spring-boot-demo-ratelimit-guava" />
         <module name="spring-boot-demo-war" />
         <module name="spring-boot-test" />
         <module name="spring-boot-demo-orm-postgresql" />
         <module name="spring-boot-demo-noifelse" />
         <module name="spring-boot-demo-admin-client" />
+        <module name="spring-boot-demo-mq-kafka-consumer" />
         <module name="db-server" />
-        <module name="spring-boot-demo-algorithm" />
+        <module name="spring-boot-demo-orm-jdbctemplate" />
         <module name="spring-boot-demo-exception-handler" />
         <module name="spring-boot-demo-cache-redis" />
       </profile>
@@ -89,6 +92,9 @@
       <module name="spring-boot-demo-encryptionanddecryption" options="-parameters" />
       <module name="spring-boot-demo-guava" options="" />
       <module name="spring-boot-demo-ldap" options="-parameters" />
+      <module name="spring-boot-demo-mq-kafka" options="-parameters" />
+      <module name="spring-boot-demo-mq-kafka-consumer" options="-parameters" />
+      <module name="spring-boot-demo-mq-kafka-provider" options="-parameters" />
       <module name="spring-boot-demo-mybatis" options="" />
       <module name="spring-boot-demo-noifelse" options="-parameters" />
       <module name="spring-boot-demo-orm-postgresql" options="-parameters" />
