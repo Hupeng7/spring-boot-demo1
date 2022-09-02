@@ -21,19 +21,23 @@ public class ConcurrentHashMapDemo1 {
         gooduse();
     }
 
-    public static Map<String, Long> gooduse()  {
+    public static Map<String, Long> gooduse() {
         ConcurrentHashMap<String, LongAdder> freqs = new ConcurrentHashMap<>(900);
         ForkJoinPool forkJoinPool = new ForkJoinPool(10);
+
         forkJoinPool.execute(() -> IntStream.rangeClosed(1, 10).parallel().forEach(i -> {
             String key = "item" + ThreadLocalRandom.current().nextInt(900);
             freqs.computeIfAbsent(key, k -> new LongAdder()).increment();
+            System.out.println(i + ": {" + key + ": " + freqs.get(key)+"}");
         }));
         forkJoinPool.shutdown();
+
         try {
             forkJoinPool.awaitTermination(1, TimeUnit.HOURS);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
         //
         return freqs.entrySet().stream()
                 .collect(Collectors.toMap(

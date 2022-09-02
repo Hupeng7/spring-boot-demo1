@@ -29,9 +29,28 @@ public class KafkaProducer {
             // 生产消息
             LocalDateTime date = LocalDateTime.now();
             String nowFormat = formatDate(date);
-
+            // 内部的业务
             String message = "hello!test kafka." + nowFormat;
             ListenableFuture<SendResult<String, String>> listenableFuture = kafkaTemplate.send("hello", "hello", message);
+            listenableFuture.addCallback(new ListenableFutureCallback<SendResult<String, String>>() {
+                @Override
+                public void onSuccess(SendResult<String, String> result) {
+                    log.info("sendMessage success");
+                }
+
+                @Override
+                public void onFailure(Throwable ex) {
+                    log.error("sendMessage error");
+                }
+            });
+        } catch (Exception e) {
+            log.error("sendMessage exception,{}", e);
+        }
+    }
+
+    public void sendMessage(String topic, String key, String message) {
+        try {
+            ListenableFuture<SendResult<String, String>> listenableFuture = kafkaTemplate.send(topic, key, message);
             listenableFuture.addCallback(new ListenableFutureCallback<SendResult<String, String>>() {
                 @Override
                 public void onSuccess(SendResult<String, String> result) {

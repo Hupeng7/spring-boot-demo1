@@ -50,6 +50,7 @@ public class SemaphoreDemo {
 
         IntStream.range(0, 10)
                 .forEach(i -> executorService.submit(longRunningTask));
+
         stop(executorService);
 
     }
