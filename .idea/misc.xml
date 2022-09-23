@@ -75,6 +75,7 @@
         <option value="$PROJECT_DIR$/spring-boot-demo-mq-kafka/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-demo-mq-kafka-provider/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-demo-mq-kafka-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/h-toolbox/pom.xml" />
       </list>
     </option>
   </component>

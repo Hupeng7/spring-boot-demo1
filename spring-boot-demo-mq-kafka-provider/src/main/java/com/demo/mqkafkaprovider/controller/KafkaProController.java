@@ -18,8 +18,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @Slf4j
 public class KafkaProController {
+    // 构造器注入
+    private final KafkaProducer kafkaProducer;
+
     @Autowired
-    private KafkaProducer kafkaProducer;
+    public KafkaProController(KafkaProducer kafkaProducer) {
+        this.kafkaProducer = kafkaProducer;
+    }
 
     @RequestMapping("/hello")
     public String hello() {

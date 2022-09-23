@@ -1,5 +1,8 @@
 package com.example.springbootdemomytool.utils.testdemo;
 
+import org.apache.commons.lang3.StringUtils;
+
+import java.io.File;
 import java.util.Random;
 
 /**
@@ -18,6 +21,11 @@ public class TestDemo01 {
         float f = 1.00__30_2F;
         //System.out.println(f);
         System.out.println("random is : "+getRandom());
+
+        System.out.println(StringUtils.isBlank(""));
+
+        File file1 = new File("/20210102/20000521_ttttt.txt");
+        System.out.println(file1.getName());
     }
 
     /**
