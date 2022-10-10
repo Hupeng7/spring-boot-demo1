@@ -30,6 +30,7 @@ public class PdfUtil {
 
     /**
      * 将pdf文件转为doc文件
+     * 无格式
      *
      * @param pdfPath
      */
@@ -66,8 +67,7 @@ public class PdfUtil {
             Document document = new Document(pdfPath);
             document.save(outputStream, SaveFormat.DocX);
             outputStream.close();
-
-            //removeWatermark(new File(wordPath));
+            removeWatermark(new File(wordPath));
             log.info("time consuming:{}", (System.currentTimeMillis() - startTime));
         } catch (IOException e) {
             log.error("pdf2doc error: {}", e);
