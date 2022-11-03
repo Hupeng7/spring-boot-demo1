@@ -27,5 +27,9 @@ public class Test {
         System.out.println(personDTO);
     //PersonDTO(describe=默认值, id=null, personName=张三, age=18, source=100, height=170.5, createTime=2022-10-10 15:20:13, updateTime=Mon Oct 10 15:20:13 CST 2022)
 
+
+        String stringM = "userName";
+
+        int remainder = 1;
     }
 }
