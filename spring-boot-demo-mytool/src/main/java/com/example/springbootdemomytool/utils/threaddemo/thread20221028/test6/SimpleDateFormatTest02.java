@@ -34,8 +34,8 @@ public class SimpleDateFormatTest02 {
             executorService.execute(() -> {
                 try {
                     semaphore.acquire();
+                    lock.lock();
                     try {
-                        lock.lock();
                         simpleDateFormat.parse("2022-11-01");
                     } catch (ParseException e) {
                         System.out.println("线程: " + Thread.currentThread().getName() + "格式化日期失败");
