@@ -25,11 +25,13 @@ public class IPersonMapperImpl implements PersonMapper {
             } else {
                 personDTO.setDescribe("默认值");
             }
+
             if (person.getId() != null) {
                 personDTO.setId(Long.parseLong(person.getId()));
             }
 
             personDTO.setPersonName(person.getName());
+
             personDTO.setAge(String.valueOf(person.getAge()));
             if (person.getSource() != null) {
                 personDTO.setSource(person.getSource().toString());
@@ -42,6 +44,11 @@ public class IPersonMapperImpl implements PersonMapper {
             personDTO.setHeight(String.valueOf(person.getHeight()));
             return personDTO;
         }
+    }
+
+    @Override
+    public Person PersonDTOToPerson(PersonDTO personDTO) {
+        return null;
     }
 
     public static Date getDateFormat(Date date, String format) {

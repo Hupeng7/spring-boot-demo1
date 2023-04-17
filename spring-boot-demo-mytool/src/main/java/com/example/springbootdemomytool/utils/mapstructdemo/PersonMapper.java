@@ -1,5 +1,6 @@
 package com.example.springbootdemomytool.utils.mapstructdemo;
 
+import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
@@ -17,7 +18,11 @@ public interface PersonMapper {
     // 表达式
     @Mapping(target = "updateTime", expression = "java(new java.util.Date())")
     // dateFormat()
-    @Mapping(target = "createTime",source = "createTime",dateFormat = "yyyy-MM-dd HH:mm:ss")
+    @Mapping(target = "createTime", source = "createTime", dateFormat = "yyyy-MM-dd HH:mm:ss")
     PersonDTO conver(Person person);
+
+    // 逆向映射 使用注解@InheritInverseConfiguration 指示方法应继承相应反向方法的反向配置。
+    @InheritInverseConfiguration
+    Person PersonDTOToPerson(PersonDTO personDTO);
 
 }
