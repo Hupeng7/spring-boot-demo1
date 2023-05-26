@@ -12,6 +12,10 @@ public class Client {
         Creator creator = new ConcreteCreator();
         Product product = creator.createProduct(ConcreteProduct1.class);
         // continue you business
+        product.method1();
+
+        System.out.println("==================");
+        product.method2();
     }
 
 }

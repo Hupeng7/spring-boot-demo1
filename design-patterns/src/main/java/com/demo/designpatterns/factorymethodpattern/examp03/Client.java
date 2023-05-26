@@ -13,6 +13,7 @@ public class Client {
         AnimalFactory factory = new FemaleAnimalFactory();
         Cat cat = (Cat) factory.createCat();
         cat.eat();
+        cat.gender();
 
         Dog dog = (Dog) factory.createDog();
         dog.eat();
