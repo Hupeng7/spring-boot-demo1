@@ -1,0 +1,96 @@
+<template>
+  <div>
+    <el-row :gutter="15">
+      <el-form ref="elForm" :model="formData" :rules="rules" size="medium" label-width="100px"
+        label-position="left">
+        <el-col :span="23">
+          <el-row type="flex" justify="start" align="middle" gutter="15">
+            <el-col :span="8">
+              <el-form-item label="资方" prop="field102">
+                <el-select v-model="formData.field102" placeholder="请选择资方" clearable :style="{width: '100%'}">
+                  <el-option v-for="(item, index) in field102Options" :key="index" :label="item.label"
+                    :value="item.value" :disabled="item.disabled"></el-option>
+                </el-select>
+              </el-form-item>
+            </el-col>
+            <el-col :span="6">
+              <el-form-item label="借据号" prop="field103">
+                <el-input v-model="formData.field103" placeholder="请输入借据号" clearable :style="{width: '100%'}">
+                </el-input>
+              </el-form-item>
+            </el-col>
+            <el-col :span="7">
+              <el-form-item label="流水号" prop="field104">
+                <el-input v-model="formData.field104" placeholder="请输入流水号" clearable :style="{width: '100%'}">
+                </el-input>
+              </el-form-item>
+            </el-col>
+          </el-row>
+        </el-col>
+        <el-col :span="24">
+          <el-form-item size="large">
+            <el-button type="primary" @click="submitForm">提交</el-button>
+            <el-button @click="resetForm">重置</el-button>
+          </el-form-item>
+        </el-col>
+      </el-form>
+    </el-row>
+  </div>
+</template>
+<script>
+export default {
+  components: {},
+  props: [],
+  data() {
+    return {
+      formData: {
+        field102: undefined,
+        field103: undefined,
+        field104: undefined,
+      },
+      rules: {
+        field102: [{
+          required: true,
+          message: '请选择资方',
+          trigger: 'change'
+        }],
+        field103: [{
+          required: true,
+          message: '请输入借据号',
+          trigger: 'blur'
+        }],
+        field104: [{
+          required: true,
+          message: '请输入流水号',
+          trigger: 'blur'
+        }],
+      },
+      field102Options: [{
+        "label": "选项一",
+        "value": 1
+      }, {
+        "label": "选项二",
+        "value": 2
+      }],
+    }
+  },
+  computed: {},
+  watch: {},
+  created() {},
+  mounted() {},
+  methods: {
+    submitForm() {
+      this.$refs['elForm'].validate(valid => {
+        if (!valid) return
+        // TODO 提交表单
+      })
+    },
+    resetForm() {
+      this.$refs['elForm'].resetFields()
+    },
+  }
+}
+
+</script>
+<style>
+</style>
