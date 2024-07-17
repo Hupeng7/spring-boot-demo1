@@ -16,7 +16,11 @@ import java.io.InputStream;
  */
 public class OkHttpDemo1 {
     public static void main(String[] args) {
-        get("https://www.baidu.com/");
+        //get("https://www.baidu.com/");
+
+        String url = "http://localhost:9901/api/hsjry/easyflow/capital/imageUpload";
+        String requestJson = "";
+        postForJson(url, requestJson);
 
     }
 

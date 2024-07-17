@@ -11,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 /**
  * @ClassName DemoExceptionHandler
- * @Description 统一异常处理
+ * @Description 全局统一异常处理
  * @Author Leo
  * @Date 2019/11/22 18:02
  * @Version 1.0
