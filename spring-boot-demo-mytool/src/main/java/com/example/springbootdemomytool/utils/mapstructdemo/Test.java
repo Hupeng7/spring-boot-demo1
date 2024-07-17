@@ -32,5 +32,6 @@ public class Test {
         String stringM = "userName";
 
         int remainder = 1;
+        int remainder2 = 2;
     }
 }
