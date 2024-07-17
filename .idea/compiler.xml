@@ -21,7 +21,7 @@
         <module name="spring-boot-demo-multi-datasource-mybatis" />
         <module name="spring-boot-demo-orm-beetlsql" />
         <module name="spring-boot-demo-noifelse" />
-        <module name="spring-boot-demo-orm-mybatis-mapper-page" />
+        <module name="db-server" />
         <module name="spring-boot-demo-easyexcel" />
         <module name="spring-boot-demo-exception-handler" />
         <module name="spring-boot-demo-websocket-socketio" />
@@ -55,6 +55,7 @@
         <module name="spring-boot-demo-algorithm" />
         <module name="spring-boot-demo-multi-datasource-jpa" />
         <module name="spring-cloud-contract-demo" />
+        <module name="spring-boot-demo-orm-mybatis-mapper-page" />
         <module name="spring-boot-demo-mq-kafka-consumer" />
         <module name="spring-boot-demo-admin-server" />
         <module name="spring-boot-demo-xxl" />
@@ -62,7 +63,6 @@
         <module name="spring-boot-demo-dynamic-datasource" />
         <module name="spring-boot-demo-cache-redis" />
         <module name="spring-boot-demo-orm-postgresql" />
-        <module name="db-server" />
         <module name="spring-boot-demo-task-quartz" />
         <module name="spring-boot-helloworld-01" />
         <module name="spring-boot-demo-effective-java-3rd" />
