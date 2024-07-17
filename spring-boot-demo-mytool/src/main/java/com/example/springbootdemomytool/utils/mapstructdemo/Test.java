@@ -33,5 +33,6 @@ public class Test {
 
         int remainder = 1;
         int remainder2 = 2;
+        int remainder3 = 3;
     }
 }
