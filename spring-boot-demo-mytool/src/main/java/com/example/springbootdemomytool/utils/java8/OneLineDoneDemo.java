@@ -1,5 +1,8 @@
 package com.example.springbootdemomytool.utils.java8;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
 import java.io.*;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
@@ -26,12 +29,15 @@ import static java.util.stream.IntStream.range;
 public class OneLineDoneDemo {
 
     public static void main(String[] args) {
-        skill1();
-        skill2();
-        skill3();
-
-        skill5();
-        skill8();
+//        skill1();
+//        skill2();
+//        skill3();
+//
+//        skill5();
+//        skill8();
+//        skill4();
+        List<UserQ> objectByTxt = getObjectByTxt("E:\\temp\\data.txt");
+        System.out.println(objectByTxt);
     }
 
     public static void skill1() {
@@ -65,30 +71,63 @@ public class OneLineDoneDemo {
         System.out.println("b2:" + b2);
     }
 
+    @Data
+    @AllArgsConstructor
+    static class UserQ {
+        private Long id;
+        private String name;
+        private Integer status;
+    }
+
     public static void skill4() {
         // 读取文件内容
-        try (BufferedReader reader = new BufferedReader(new FileReader("data.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("E:\\temp\\data.txt"))) {
             String fileText = reader.lines().reduce("", String::concat);
+            System.out.println(fileText);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("data.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("E:\\temp\\data.txt"))) {
             List<String> fileLines = reader.lines().collect(Collectors.toCollection(LinkedList<String>::new));
+            System.out.println(fileLines);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        try (Stream<String> lines = Files.lines(new File("data.txt").toPath(), Charset.defaultCharset())) {
+        try (Stream<String> lines = Files.lines(new File("E:\\temp\\data.txt").toPath(), Charset.defaultCharset())) {
             List<String> fileLines = lines.collect(Collectors.toCollection(LinkedList<String>::new));
+            System.out.println(fileLines);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
+    }
+
+    public static List<UserQ> getObjectByTxt(String fileName) {
+        List<UserQ> list = new ArrayList<>();
+        try (InputStreamReader streamReader = new InputStreamReader(new FileInputStream(fileName));
+             BufferedReader bufferedReader = new BufferedReader(streamReader)) {
+            String len;
+            int batchCount = 10;
+            while ((len = bufferedReader.readLine()) != null) {
+                String[] split = len.split(",");
+                UserQ userQ = new UserQ(
+                        Long.parseLong(split[0]),
+                        split[1],
+                        Integer.parseInt(split[2])
+                );
+                list.add(userQ);
+                // 达到500条就异步写入一下
+            }
+        } catch (IOException e) {
+
+        }
+        return list;
     }
 
     public static void skill5() {
@@ -136,7 +175,7 @@ public class OneLineDoneDemo {
         // long result = dataList.parallelStream().mapToInt(line -> processItem(line)).sum();
     }
 
-    public static void skill10(){
+    public static void skill10() {
 
     }
 

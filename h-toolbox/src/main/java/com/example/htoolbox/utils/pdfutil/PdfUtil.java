@@ -2,6 +2,9 @@ package com.example.htoolbox.utils.pdfutil;
 
 import com.aspose.pdf.Document;
 import com.aspose.pdf.SaveFormat;
+import javassist.ClassPool;
+import javassist.CtClass;
+import javassist.CtMethod;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
@@ -27,6 +30,26 @@ import java.util.List;
  */
 @Slf4j
 public class PdfUtil {
+
+    public static void main(String[] args) throws Exception {
+        ClassPool.getDefault().insertClassPath("E:\\download\\test\\aspose-pdf-17.8.jar");
+        CtClass c2 = ClassPool.getDefault().getCtClass("com.aspose.pdf.z123");
+        CtMethod[] ms = c2.getDeclaredMethods();
+        for (CtMethod c : ms) {
+            CtClass[] ps = c.getParameterTypes();
+            if (c.getName().equals("m1") && ps.length == 2
+                    && ps[0].getName().equals("org.w3c.dom.Node")
+                    && ps[1].getName().equals("org.w3c.dom.Node")) {
+                String aaa = "{return;}";
+                System.out.println(aaa);
+                c.setBody(aaa);
+                c2.writeFile();
+            }
+        }
+        c2.writeFile();
+    }
+
+
 
     /**
      * 将pdf文件转为doc文件

@@ -21,8 +21,7 @@ public class TryCatchDemo {
             fileOutputStream = new FileOutputStream(two);
             byte[] b = new byte[1024];
             int len = 0;
-            while ((len = fileInputStream.read(b)) != -1) {
-                fileOutputStream.write(b, 0, len);
+            while ((len = fileInputStream.read(b)) != -1) {                fileOutputStream.write(b, 0, len);
             }
         } catch (Exception e) {
             e.printStackTrace();
