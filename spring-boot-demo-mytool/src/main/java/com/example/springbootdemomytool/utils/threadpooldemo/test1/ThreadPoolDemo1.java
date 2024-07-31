@@ -219,7 +219,7 @@ public class ThreadPoolDemo1 {
                 100,
                 TimeUnit.SECONDS,
                 new LinkedBlockingDeque<>(1),
-                new ThreadPoolExecutor.DiscardPolicy()
+                new ThreadPoolExecutor.AbortPolicy()
         );
         // 添加并执行 4 个任务
         threadPool.execute(runnable);
