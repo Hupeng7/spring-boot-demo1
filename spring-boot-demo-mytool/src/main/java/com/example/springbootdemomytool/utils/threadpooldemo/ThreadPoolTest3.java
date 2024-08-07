@@ -36,7 +36,10 @@ public class ThreadPoolTest3 {
         aMap.put("mobile", "");
         aMap.put("idNo", "");
 
-        aa = aMap;
+        // 将ConcurrentHashMap转为HashMap，下面aa = aMap直接赋值不可传递，可以一个一个put,或者putAll()
+        aa.putAll(aMap);
+
+        //  aa = aMap;
         System.out.println(aa.keySet());
 
 //        Boolean b = aMap.size() == 3;
