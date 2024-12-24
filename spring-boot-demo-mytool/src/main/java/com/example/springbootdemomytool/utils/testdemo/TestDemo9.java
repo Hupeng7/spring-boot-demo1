@@ -14,11 +14,30 @@ import java.util.List;
 public class TestDemo9 {
 
     public static void main(String[] args) {
-        int i = test1("414");
-        System.out.println("i======>" + i);
+        int a = test1("414");
+        System.out.println("a======>" + a);
 
         String loanNo = "HXHT1002892026081210042156001";
         System.out.println(loanNo.substring(2));
+
+        int i = 0;
+        while (true) {
+            System.out.println("do something ....,i is:" + i);
+
+            if (i++ >= 2) {
+                System.out.println("current i is :" + i);
+                break;
+            }
+        }
+
+        String tableName = "log_inout_common_a1t1";
+        String sql = " SELECT " +
+                "user_id as userId,service_id as serviceId,response_time as responseTime,error_code as errorCode,id,3 AS operatorOut,product_name as productName,raw_data_status as rawDataStatus  " +
+                " FROM " + tableName +
+                " WHERE create_time >= :start  AND create_time < :end  AND raw_data_service != 'hz'  AND error_code = '0000' ";
+
+        // sql.replace("#tableName#", tableName);
+        System.out.println(sql);
 
     }
 

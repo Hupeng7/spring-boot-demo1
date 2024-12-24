@@ -1,6 +1,8 @@
 package com.example.springbootdemomytool.utils.testdemo;
 
 import java.math.BigDecimal;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 /**
@@ -32,7 +34,7 @@ public class TestDemo10 {
                 + " avg_hits:" + BigDecimal.valueOf(total).divide(BigDecimal.valueOf(onHandleTimes), 4, BigDecimal.ROUND_HALF_UP));
 
         for (int j = 3; j <= 12; j++) {
-            System.out.println("do............."+j);
+            System.out.println("do............." + j);
         }
 
     }
@@ -60,7 +62,45 @@ public class TestDemo10 {
     }
 
     public static void main(String[] args) {
-        test1();
+        // test1();
+        StringBuilder sb = new StringBuilder("select ( ");
+        int sizeA = 2;
+        for (int i = 1; i < sizeA; i++) {
+            System.out.println(i);
+            sb.append(" tableName " + i);
+            int lastIndex = sizeA - 1;
+            if (i < lastIndex && i >= 1) {
+                sb.append(" + ");
+            }
+        }
+        sb.append(") as totalCount");
+        System.out.println(sb);
+
+        Map<String, Object> params = new HashMap<>(6);
+        params.put("mobile", "11111");
+        params.put("idNo", "2222");
+        params.put("name", "3333");
+        params.put("group", "4444");
+        params.put("updateTime", "5555");
+        params.put("updateTime2", 666);
+        params.put("method", "v1");
+
+        String idNo = (String)params.get("idNo");
+        String beforeMonth = (String)params.get("beforeMonth");
+        Integer is_mnp = (Integer) params.get("is_mnp");
+        Integer updateTime2 = (Integer) params.get("updateTime2");
+        System.out.println(idNo);
+        System.out.println(beforeMonth);
+        System.out.println(is_mnp);
+        System.out.println(updateTime2);
+
+        String a1 = params.get("updateTime").toString();
+        System.out.println(a1);
+
+        String a = params.get("a").toString();
+//        System.out.println(a);
+
+
     }
 
 }
