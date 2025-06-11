@@ -1,6 +1,7 @@
 package com.example.springbootdemomytool.utils.testdemo;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 
 import java.math.BigDecimal;
 
@@ -42,6 +43,11 @@ public class TestDemo12 {
         log.info("length c: {}", c.length());
         log.info("length d: {}", d.length());
         log.info("length e: {}", e.length());
+
+        String mobile = "ac";
+        if (StringUtils.isBlank(mobile) || mobile.length() < 11) {
+            log.info("mobile:{}", mobile);
+        }
 
     }
 

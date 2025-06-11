@@ -49,6 +49,7 @@
         <module>spring-boot-demo-xxl</module>
         <module>spring-boot-demo-mybatis</module>
         <module>spring-boot-demo-redis-token-limit</module>
+        <module>spring-boot-demo-encryptanddecrypt</module>
     </modules>
 
     <packaging>pom</packaging>
